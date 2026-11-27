@@ -24,6 +24,7 @@ would drop intervals, so this archive always uses the uncached `/api/embed/` pat
 ```
 data/<gauge>_<location>.csv   one file per gauge, append-only
 stations.csv                  gauge metadata index
+stations.md                   readable directory of every gauge, grouped by district
 state/schema.json             fingerprint of the API's field set (written only when it changes)
 scripts/archive.py            the collector
 ```
@@ -55,8 +56,9 @@ date_time_local,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,rain_1
 | `live_status_label` | Site's human-readable status, e.g. `Normal`, `No Data (24 hours)`, `Warning Level 1` |
 | `lat`, `lng` | Gauge coordinates (WGS84 degrees), repeated on every row so each file is self-contained |
 
-`stations.csv` columns: `id,file,location,district_en,dsd_en,gnd_en,lat,lng,first_seen_utc,last_seen_date_time`.
-It also carries each gauge's coordinates (`lat`, `lng`) and the file that holds its readings.
+`stations.csv` columns: `id,file,location,district,district_en,dsd,dsd_en,gnd,gnd_en,lat,lng,first_seen_utc,last_seen_date_time`.
+It carries each gauge's coordinates and the file that holds its readings. `stations.md` is a
+readable directory of the same gauges, grouped by district, with links to each data file.
 
 ## Caveats
 

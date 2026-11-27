@@ -19,6 +19,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -62,8 +63,11 @@ META_COLUMNS = [
     "id",
     "file",
     "location",
+    "district",
     "district_en",
+    "dsd",
     "dsd_en",
+    "gnd",
     "gnd_en",
     "lat",
     "lng",
@@ -403,8 +407,11 @@ def render_stations(
                 "id": station_id,
                 "file": file_map[station_id],
                 "location": as_text(record.get("location")),
+                "district": as_text(record.get("district")),
                 "district_en": as_text(record.get("district_en")),
+                "dsd": as_text(record.get("dsd")),
                 "dsd_en": as_text(record.get("dsd_en")),
+                "gnd": as_text(record.get("gnd")),
                 "gnd_en": as_text(record.get("gnd_en")),
                 "lat": as_text(record.get("lat")),
                 "lng": as_text(record.get("lng")),
@@ -419,6 +426,68 @@ def render_stations(
     writer.writeheader()
     writer.writerows(rendered)
     return buffer.getvalue()
+
+
+def md_cell(value: str) -> str:
+    return (value or "").replace("|", "\\|").replace("\n", " ").strip()
+
+
+def render_station_directory(records: list[dict], file_map: dict[str, str]) -> str:
+    rows: list[dict[str, str]] = []
+    for record in records:
+        station_id = str(record.get("id") or "").strip()
+        if not station_id:
+            continue
+        rows.append(
+            {
+                "id": station_id,
+                "file": file_map[station_id],
+                "location": as_text(record.get("location")),
+                "district_en": as_text(record.get("district_en"))
+                or as_text(record.get("district")),
+                "dsd_en": as_text(record.get("dsd_en")) or as_text(record.get("dsd")),
+                "gnd_en": as_text(record.get("gnd_en")) or as_text(record.get("gnd")),
+                "lat": as_text(record.get("lat")),
+                "lng": as_text(record.get("lng")),
+            }
+        )
+    rows.sort(key=lambda item: (item["district_en"].lower(), item["location"].lower(), item["id"]))
+
+    counts = Counter(row["district_en"] for row in rows)
+    lines = [
+        "# Rainfall gauge directory",
+        "",
+        f"{len(rows)} gauges. Static details only; live readings are in the per-gauge files under `data/`.",
+        "",
+        "## Gauges by district",
+        "",
+        "| District | Gauges |",
+        "|---|---:|",
+    ]
+    for district, count in sorted(counts.items()):
+        lines.append(f"| {md_cell(district)} | {count} |")
+
+    lines += [
+        "",
+        "## All gauges",
+        "",
+        "| ID | Name | District | DSD | GND | Lat | Lng | Data file |",
+        "|---|---|---|---|---|---:|---:|---|",
+    ]
+    for row in rows:
+        lines.append(
+            "| {id} | {location} | {district_en} | {dsd_en} | {gnd_en} | {lat} | {lng} | [{file}](data/{file}) |".format(
+                id=md_cell(row["id"]),
+                location=md_cell(row["location"]),
+                district_en=md_cell(row["district_en"]),
+                dsd_en=md_cell(row["dsd_en"]),
+                gnd_en=md_cell(row["gnd_en"]),
+                lat=md_cell(row["lat"]),
+                lng=md_cell(row["lng"]),
+                file=row["file"],
+            )
+        )
+    return "\n".join(lines) + "\n"
 
 
 def write_if_changed(path: Path, text: str) -> bool:
@@ -517,6 +586,11 @@ def main() -> int:
         stations_text = render_stations(records, file_map, meta, fetched_at)
         meta_changed = write_if_changed(root / "stations.csv", stations_text)
         print(f"stations.csv {'updated' if meta_changed else 'unchanged'}")
+
+        directory_changed = write_if_changed(
+            root / "stations.md", render_station_directory(records, file_map)
+        )
+        print(f"stations.md {'updated' if directory_changed else 'unchanged'}")
 
     print(
         f"stations={len(records)} appended={appended} created_files={created} "
