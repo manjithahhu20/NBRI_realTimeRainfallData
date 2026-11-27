@@ -1,0 +1,8 @@
+# local secrets — never commit
+cron-job.org API key.txt
+github-fine-grained-token.txt
+
+# scratch
+.tmp/
+__pycache__/
+*.pyc
