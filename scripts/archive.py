@@ -39,7 +39,7 @@ HEADERS = {
 }
 
 CSV_COLUMNS = [
-    "date_time",
+    "date_time_local",
     "fetched_at_utc",
     "curr_mm",
     "1h_mm",
@@ -74,16 +74,16 @@ REQUIRED_KEYS = {"id", "date_time", "curr_mm", "24h_mm", "48h_mm", "72h_mm", "di
 SAFE_CHARS = re.compile(r"[^A-Za-z0-9._-]")
 OFFSET_RE = re.compile(r"(Z|[+-]\d{2}:?\d{2})$")
 
-# Sri Lanka has used UTC+05:30 with no daylight saving since 1996. The API
-# publishes naive local timestamps, so the offset is added to make them explicit.
-COLOMBO_OFFSET = "+05:30"
 
+def excel_datetime(value: str) -> str:
+    """Plain `YYYY-MM-DD HH:MM:SS` so Excel parses it as a date/time.
 
-def localize(value: str) -> str:
+    Timezone suffixes are dropped; the zone comes from the column heading.
+    """
     text = (value or "").strip()
-    if not text or OFFSET_RE.search(text):
-        return text
-    return text + COLOMBO_OFFSET
+    if not text:
+        return ""
+    return OFFSET_RE.sub("", text).replace("T", " ")
 
 
 def bare_timestamp(value: str) -> str:
@@ -221,7 +221,7 @@ def last_date_time(path: Path) -> str | None:
     if not lines:
         return None
     last = lines[-1]
-    if last.startswith("date_time,"):
+    if last.startswith("date_time_local,"):
         return None
     try:
         row = next(csv.reader([last]))
@@ -234,8 +234,8 @@ def as_text(value) -> str:
     return "" if value is None else str(value)
 
 
-def ensure_coordinate_columns(path: Path, lat: str, lng: str) -> bool:
-    """Add lat/lng to a file written before those columns existed."""
+def ensure_schema(path: Path, lat: str, lng: str) -> bool:
+    """Bring an older file (heading or timestamp format) up to the current schema."""
     if not path.exists() or path.stat().st_size == 0:
         return False
 
@@ -257,6 +257,8 @@ def ensure_coordinate_columns(path: Path, lat: str, lng: str) -> bool:
         while len(row) < width:
             row.append("")
         row = row[:width]
+        row[0] = excel_datetime(row[0])
+        row[1] = excel_datetime(row[1])
         if lat and not row[-2]:
             row[-2] = lat
         if lng and not row[-1]:
@@ -281,7 +283,7 @@ def append_row(path: Path, record: dict, fetched_at: str) -> bool:
                 with path.open("a", encoding="utf-8", newline="") as fix:
                     fix.write("\n")
 
-    row = [localize(as_text(record.get("date_time"))), fetched_at]
+    row = [excel_datetime(as_text(record.get("date_time"))), excel_datetime(fetched_at)]
     row.extend(as_text(record.get(column)) for column in CSV_COLUMNS[2:])
 
     with path.open("a", encoding="utf-8", newline="") as handle:
@@ -339,7 +341,7 @@ def render_stations(
                 "lat": as_text(record.get("lat")),
                 "lng": as_text(record.get("lng")),
                 "first_seen_utc": prior.get("first_seen_utc") or fetched_at,
-                "last_seen_date_time": localize(as_text(record.get("date_time")))
+                "last_seen_date_time": excel_datetime(as_text(record.get("date_time")))
                 or prior.get("last_seen_date_time", ""),
             }
         )
@@ -359,33 +361,6 @@ def write_if_changed(path: Path, text: str) -> bool:
     return True
 
 
-def localize_existing_files(data_dir: Path) -> int:
-    """One-time pass: add the UTC offset to timestamps written before it was explicit."""
-    changed = 0
-    for path in sorted(data_dir.glob("*.csv")):
-        with path.open(encoding="utf-8", newline="") as handle:
-            rows = list(csv.reader(handle))
-        if len(rows) < 2:
-            continue
-
-        dirty = False
-        for row in rows[1:]:
-            if row:
-                updated = localize(row[0])
-                if updated != row[0]:
-                    row[0] = updated
-                    dirty = True
-        if not dirty:
-            continue
-
-        buffer = io.StringIO()
-        writer = csv.writer(buffer, lineterminator="\n")
-        writer.writerows(rows)
-        path.write_text(buffer.getvalue(), encoding="utf-8", newline="")
-        changed += 1
-    return changed
-
-
 def emit_output(rows_appended: int) -> None:
     output_path = os.environ.get("GITHUB_OUTPUT")
     if output_path:
@@ -398,16 +373,11 @@ def main() -> int:
     parser.add_argument("--root", default=str(Path(__file__).resolve().parent.parent))
     parser.add_argument("--per-page", type=int, default=PER_PAGE)
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument(
-        "--localize-existing",
-        action="store_true",
-        help="one-time: add +05:30 to timestamps written before it was explicit",
-    )
     args = parser.parse_args()
 
     root = Path(args.root).resolve()
     data_dir = root / "data"
-    fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 
     try:
         stations_path = resolve_stations_path()
@@ -425,8 +395,6 @@ def main() -> int:
 
     if not args.dry_run:
         data_dir.mkdir(parents=True, exist_ok=True)
-        if args.localize_existing:
-            print(f"localized {localize_existing_files(data_dir)} files")
 
     appended = 0
     created = 0
@@ -439,7 +407,7 @@ def main() -> int:
             continue
 
         path = data_dir / file_map[station_id]
-        if not args.dry_run and ensure_coordinate_columns(
+        if not args.dry_run and ensure_schema(
             path, as_text(record.get("lat")), as_text(record.get("lng"))
         ):
             migrated += 1

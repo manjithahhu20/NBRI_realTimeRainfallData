@@ -37,13 +37,13 @@ shows the current location. `stations.csv` maps every file back to its real ID.
 ## Per-gauge CSV
 
 ```
-date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_status,s_status,s_status_error,live_status_label,lat,lng
+date_time_local,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_status,s_status,s_status_error,live_status_label,lat,lng
 ```
 
 | Column | Meaning |
 |---|---|
-| `date_time` | Reading timestamp in Sri Lanka local time (Asia/Colombo), with the UTC offset: `2026-11-27 07:45:00+05:30` |
-| `fetched_at_utc` | When this archive first observed the row (UTC, ending in `Z`) |
+| `date_time_local` | Reading timestamp in Sri Lanka local time (Asia/Colombo, UTC+05:30), `YYYY-MM-DD HH:MM:SS` |
+| `fetched_at_utc` | When this archive first observed the row, UTC, `YYYY-MM-DD HH:MM:SS` |
 | `curr_mm` | Current rainfall value in mm; appears to be the running total for the day (it equals `24h_mm` for most gauges early in the day) |
 | `1h_mm` | 1-hour value; currently always empty — kept in case the provider starts publishing it |
 | `24h_mm`, `48h_mm`, `72h_mm` | Rolling 24/48/72-hour rainfall totals in mm |
@@ -64,11 +64,12 @@ It also carries each gauge's coordinates (`lat`, `lng`) and the file that holds 
   persists for ~15 minutes. Polling every 5 minutes means each value is seen three
   times, so a slow or failed run does not lose data.
 - **Gaps are real.** If the workflow or the provider is down, the affected interval is
-  absent. `fetched_at_utc` and jumps in `date_time` make gaps visible; nothing is ever
+  absent. `fetched_at_utc` and jumps in `date_time_local` make gaps visible; nothing is ever
   interpolated or fabricated.
-- **Timezone:** `date_time` is Sri Lanka local time (Asia/Colombo) and carries the
-  `+05:30` offset explicitly; `fetched_at_utc` is UTC. Sri Lanka has no daylight saving.
-- **Duplicates are prevented** by `(gauge, date_time)`; a repeated poll appends nothing.
+- **Timezone:** `date_time_local` is Sri Lanka local time (Asia/Colombo, UTC+05:30, no
+  daylight saving) and `fetched_at_utc` is UTC. Both use plain `YYYY-MM-DD HH:MM:SS`, so
+  Excel opens them as datetimes.
+- **Duplicates are prevented** by `(gauge, date_time_local)`; a repeated poll appends nothing.
 - **Out-of-order readings are dropped** rather than inserted, keeping each file
   chronological.
 - **Error-reason strings are not stored** — every gauge currently reports the literal
@@ -110,8 +111,8 @@ It also carries each gauge's coordinates (`lat`, `lng`) and the file that holds 
 import pandas as pd
 
 df = pd.read_csv("data/L14_Kendagolla.csv")
-df["date_time"] = pd.to_datetime(df["date_time"], utc=True)      # stored as +05:30
-df["fetched_at_utc"] = pd.to_datetime(df["fetched_at_utc"], utc=True)
+df["date_time_local"] = pd.to_datetime(df["date_time_local"]).dt.tz_localize("Asia/Colombo")
+df["fetched_at_utc"] = pd.to_datetime(df["fetched_at_utc"]).dt.tz_localize("UTC")
 ```
 
 ## Attribution
