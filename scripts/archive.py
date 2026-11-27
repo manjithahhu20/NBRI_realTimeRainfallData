@@ -70,6 +70,22 @@ META_COLUMNS = [
 REQUIRED_KEYS = {"id", "date_time", "curr_mm", "24h_mm", "48h_mm", "72h_mm", "diff_mm"}
 
 SAFE_CHARS = re.compile(r"[^A-Za-z0-9._-]")
+OFFSET_RE = re.compile(r"(Z|[+-]\d{2}:?\d{2})$")
+
+# Sri Lanka has used UTC+05:30 with no daylight saving since 1996. The API
+# publishes naive local timestamps, so the offset is added to make them explicit.
+COLOMBO_OFFSET = "+05:30"
+
+
+def localize(value: str) -> str:
+    text = (value or "").strip()
+    if not text or OFFSET_RE.search(text):
+        return text
+    return text + COLOMBO_OFFSET
+
+
+def bare_timestamp(value: str) -> str:
+    return OFFSET_RE.sub("", (value or "").strip())
 
 
 def fetch_json(url: str, timeout: int = 30, attempts: int = 3):
@@ -226,7 +242,7 @@ def append_row(path: Path, record: dict, fetched_at: str) -> bool:
                 with path.open("a", encoding="utf-8", newline="") as fix:
                     fix.write("\n")
 
-    row = [as_text(record.get("date_time")), fetched_at]
+    row = [localize(as_text(record.get("date_time"))), fetched_at]
     row.extend(as_text(record.get(column)) for column in CSV_COLUMNS[2:])
 
     with path.open("a", encoding="utf-8", newline="") as handle:
@@ -284,7 +300,7 @@ def render_stations(
                 "lat": as_text(record.get("lat")),
                 "lng": as_text(record.get("lng")),
                 "first_seen_utc": prior.get("first_seen_utc") or fetched_at,
-                "last_seen_date_time": as_text(record.get("date_time"))
+                "last_seen_date_time": localize(as_text(record.get("date_time")))
                 or prior.get("last_seen_date_time", ""),
             }
         )
@@ -304,6 +320,33 @@ def write_if_changed(path: Path, text: str) -> bool:
     return True
 
 
+def localize_existing_files(data_dir: Path) -> int:
+    """One-time pass: add the UTC offset to timestamps written before it was explicit."""
+    changed = 0
+    for path in sorted(data_dir.glob("*.csv")):
+        with path.open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.reader(handle))
+        if len(rows) < 2:
+            continue
+
+        dirty = False
+        for row in rows[1:]:
+            if row:
+                updated = localize(row[0])
+                if updated != row[0]:
+                    row[0] = updated
+                    dirty = True
+        if not dirty:
+            continue
+
+        buffer = io.StringIO()
+        writer = csv.writer(buffer, lineterminator="\n")
+        writer.writerows(rows)
+        path.write_text(buffer.getvalue(), encoding="utf-8", newline="")
+        changed += 1
+    return changed
+
+
 def emit_output(rows_appended: int) -> None:
     output_path = os.environ.get("GITHUB_OUTPUT")
     if output_path:
@@ -316,6 +359,11 @@ def main() -> int:
     parser.add_argument("--root", default=str(Path(__file__).resolve().parent.parent))
     parser.add_argument("--per-page", type=int, default=PER_PAGE)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--localize-existing",
+        action="store_true",
+        help="one-time: add +05:30 to timestamps written before it was explicit",
+    )
     args = parser.parse_args()
 
     root = Path(args.root).resolve()
@@ -338,6 +386,8 @@ def main() -> int:
 
     if not args.dry_run:
         data_dir.mkdir(parents=True, exist_ok=True)
+        if args.localize_existing:
+            print(f"localized {localize_existing_files(data_dir)} files")
 
     appended = 0
     created = 0
@@ -351,7 +401,7 @@ def main() -> int:
 
         path = data_dir / file_map[station_id]
         last = last_date_time(path)
-        if last is not None and date_time <= last:
+        if last is not None and bare_timestamp(date_time) <= bare_timestamp(last):
             skipped += 1
             continue
 

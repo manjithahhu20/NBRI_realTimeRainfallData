@@ -42,8 +42,8 @@ date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_s
 
 | Column | Meaning |
 |---|---|
-| `date_time` | Reading timestamp as published, Asia/Colombo, `YYYY-MM-DD HH:MM:SS` |
-| `fetched_at_utc` | When this archive first observed the row (UTC) |
+| `date_time` | Reading timestamp in Sri Lanka local time (Asia/Colombo), with the UTC offset: `2026-11-27 07:45:00+05:30` |
+| `fetched_at_utc` | When this archive first observed the row (UTC, ending in `Z`) |
 | `curr_mm` | Current rainfall value in mm; appears to be the running total for the day (it equals `24h_mm` for most gauges early in the day) |
 | `1h_mm` | 1-hour value; currently always empty — kept in case the provider starts publishing it |
 | `24h_mm`, `48h_mm`, `72h_mm` | Rolling 24/48/72-hour rainfall totals in mm |
@@ -53,6 +53,7 @@ date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_s
 | `live_status_label` | Site's human-readable status, e.g. `Normal`, `No Data (24 hours)`, `Warning Level 1` |
 
 `stations.csv` columns: `id,file,location,district_en,dsd_en,gnd_en,lat,lng,first_seen_utc,last_seen_date_time`.
+It also carries each gauge's coordinates (`lat`, `lng`) and the file that holds its readings.
 
 ## Caveats
 
@@ -64,6 +65,8 @@ date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_s
 - **Gaps are real.** If the workflow or the provider is down, the affected interval is
   absent. `fetched_at_utc` and jumps in `date_time` make gaps visible; nothing is ever
   interpolated or fabricated.
+- **Timezone:** `date_time` is Sri Lanka local time (Asia/Colombo) and carries the
+  `+05:30` offset explicitly; `fetched_at_utc` is UTC. Sri Lanka has no daylight saving.
 - **Duplicates are prevented** by `(gauge, date_time)`; a repeated poll appends nothing.
 - **Out-of-order readings are dropped** rather than inserted, keeping each file
   chronological.
