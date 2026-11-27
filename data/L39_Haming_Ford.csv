@@ -1,2 +1,2 @@
-date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_status,s_status,s_status_error,live_status_label
-2026-11-27 07:00:00+05:30,2026-11-27T01:48:16Z,59.60,,59.60,68.40,78.60,0.00,1,True,True,False,Normal
+date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_status,s_status,s_status_error,live_status_label,lat,lng
+2026-11-27 07:00:00+05:30,2026-11-27T01:48:16Z,59.60,,59.60,68.40,78.60,0.00,1,True,True,False,Normal,6.8473,80.3259
