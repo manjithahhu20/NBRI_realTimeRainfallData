@@ -47,6 +47,7 @@ CSV_COLUMNS = [
     "48h_mm",
     "72h_mm",
     "diff_mm",
+    "rain_15m_mm",
     "r_status",
     "c_status",
     "s_status",
@@ -209,7 +210,7 @@ def build_file_map(
     return mapping, renamed
 
 
-def last_date_time(path: Path) -> str | None:
+def last_row(path: Path) -> dict[str, str] | None:
     if not path.exists() or path.stat().st_size == 0:
         return None
     with path.open("rb") as handle:
@@ -224,10 +225,35 @@ def last_date_time(path: Path) -> str | None:
     if last.startswith("date_time_local,"):
         return None
     try:
-        row = next(csv.reader([last]))
+        values = next(csv.reader([last]))
     except (StopIteration, csv.Error):
         return None
-    return row[0] if row else None
+    return dict(zip(CSV_COLUMNS, values))
+
+
+def compute_rain_15m(prev: dict[str, str] | None, date_time: str, curr: str) -> str:
+    """Rainfall in the 15 minutes ending at `date_time`.
+
+    `curr_mm` is a running daily total, so the interval rain is its change since
+    the previous reading. It is only attributed when that reading is exactly 15
+    minutes earlier on the same day; otherwise the change spans a gap or a reset
+    and the value is left blank rather than guessed.
+    """
+    if prev is None or not curr:
+        return ""
+    prev_dt = prev.get("date_time_local", "")
+    prev_curr = prev.get("curr_mm", "")
+    if not prev_dt or not prev_curr or prev_dt[:10] != date_time[:10]:
+        return ""
+    try:
+        start = datetime.strptime(prev_dt, "%Y-%m-%d %H:%M:%S")
+        end = datetime.strptime(date_time, "%Y-%m-%d %H:%M:%S")
+        value = round(float(curr) - float(prev_curr), 2)
+    except ValueError:
+        return ""
+    if (end - start).total_seconds() != 900 or value < 0:
+        return ""
+    return f"{value:.2f}"
 
 
 def as_text(value) -> str:
@@ -235,7 +261,7 @@ def as_text(value) -> str:
 
 
 def ensure_schema(path: Path, lat: str, lng: str) -> bool:
-    """Bring an older file (heading or timestamp format) up to the current schema."""
+    """Bring an older file (heading, columns, or timestamp format) up to date."""
     if not path.exists() or path.stat().st_size == 0:
         return False
 
@@ -249,21 +275,23 @@ def ensure_schema(path: Path, lat: str, lng: str) -> bool:
     if not rows:
         return False
 
-    width = len(CSV_COLUMNS)
+    old_header = ["date_time_local" if name == "date_time" else name for name in rows[0]]
     body: list[list[str]] = []
+    prev: dict[str, str] | None = None
     for row in rows[1:]:
         if not row:
             continue
-        while len(row) < width:
-            row.append("")
-        row = row[:width]
-        row[0] = excel_datetime(row[0])
-        row[1] = excel_datetime(row[1])
-        if lat and not row[-2]:
-            row[-2] = lat
-        if lng and not row[-1]:
-            row[-1] = lng
-        body.append(row)
+        old = dict(zip(old_header, row))
+        new = {column: old.get(column, "") for column in CSV_COLUMNS}
+        new["date_time_local"] = excel_datetime(new["date_time_local"])
+        new["fetched_at_utc"] = excel_datetime(new["fetched_at_utc"])
+        if lat and not new["lat"]:
+            new["lat"] = lat
+        if lng and not new["lng"]:
+            new["lng"] = lng
+        new["rain_15m_mm"] = compute_rain_15m(prev, new["date_time_local"], new["curr_mm"])
+        body.append([new[column] for column in CSV_COLUMNS])
+        prev = {"date_time_local": new["date_time_local"], "curr_mm": new["curr_mm"]}
 
     buffer = io.StringIO()
     writer = csv.writer(buffer, lineterminator="\n")
@@ -273,7 +301,7 @@ def ensure_schema(path: Path, lat: str, lng: str) -> bool:
     return True
 
 
-def append_row(path: Path, record: dict, fetched_at: str) -> bool:
+def append_row(path: Path, record: dict, fetched_at: str, rain_15m: str) -> bool:
     """Append one row. Returns True if the file was created."""
     created = not path.exists() or path.stat().st_size == 0
     if not created:
@@ -283,8 +311,11 @@ def append_row(path: Path, record: dict, fetched_at: str) -> bool:
                 with path.open("a", encoding="utf-8", newline="") as fix:
                     fix.write("\n")
 
-    row = [excel_datetime(as_text(record.get("date_time"))), excel_datetime(fetched_at)]
-    row.extend(as_text(record.get(column)) for column in CSV_COLUMNS[2:])
+    values = {column: as_text(record.get(column)) for column in CSV_COLUMNS}
+    values["date_time_local"] = excel_datetime(as_text(record.get("date_time")))
+    values["fetched_at_utc"] = excel_datetime(fetched_at)
+    values["rain_15m_mm"] = rain_15m
+    row = [values[column] for column in CSV_COLUMNS]
 
     with path.open("a", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle, lineterminator="\n")
@@ -417,16 +448,22 @@ def main() -> int:
             skipped += 1
             continue
 
-        last = last_date_time(path)
-        if last is not None and bare_timestamp(date_time) <= bare_timestamp(last):
+        last = last_row(path)
+        if last is not None and bare_timestamp(date_time) <= bare_timestamp(
+            last.get("date_time_local", "")
+        ):
             skipped += 1
             continue
+
+        rain_15m = compute_rain_15m(
+            last, excel_datetime(date_time), as_text(record.get("curr_mm"))
+        )
 
         if args.dry_run:
             appended += 1
             continue
 
-        if append_row(path, record, fetched_at):
+        if append_row(path, record, fetched_at, rain_15m):
             created += 1
         appended += 1
 

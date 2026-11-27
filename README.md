@@ -37,17 +37,18 @@ shows the current location. `stations.csv` maps every file back to its real ID.
 ## Per-gauge CSV
 
 ```
-date_time_local,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_status,s_status,s_status_error,live_status_label,lat,lng
+date_time_local,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,rain_15m_mm,r_status,c_status,s_status,s_status_error,live_status_label,lat,lng
 ```
 
 | Column | Meaning |
 |---|---|
 | `date_time_local` | Reading timestamp in Sri Lanka local time (Asia/Colombo, UTC+05:30), `YYYY-MM-DD HH:MM:SS` |
 | `fetched_at_utc` | When this archive first observed the row, UTC, `YYYY-MM-DD HH:MM:SS` |
-| `curr_mm` | Current rainfall value in mm; appears to be the running total for the day (it equals `24h_mm` for most gauges early in the day) |
+| `curr_mm` | Running rainfall total for the day so far, mm. It never decreases within a day and is always ≤ `24h_mm` |
 | `1h_mm` | 1-hour value; currently always empty — kept in case the provider starts publishing it |
 | `24h_mm`, `48h_mm`, `72h_mm` | Rolling 24/48/72-hour rainfall totals in mm |
-| `diff_mm` | Difference since the previous reading, mm |
+| `diff_mm` | Change in `curr_mm` since the previous stored reading, mm (spans gaps if readings were missed) |
+| `rain_15m_mm` | Rainfall in the 15 minutes ending at `date_time_local`, mm. The `curr_mm` change when the previous reading is exactly 15 minutes earlier on the same day; blank across a gap or the daily reset |
 | `r_status` | Reading status as published (observed `0` = no data, `1` = normal, `2` = warning) |
 | `c_status`, `s_status`, `s_status_error` | Connection/sensor flags as published |
 | `live_status_label` | Site's human-readable status, e.g. `Normal`, `No Data (24 hours)`, `Warning Level 1` |
@@ -69,6 +70,9 @@ It also carries each gauge's coordinates (`lat`, `lng`) and the file that holds 
 - **Timezone:** `date_time_local` is Sri Lanka local time (Asia/Colombo, UTC+05:30, no
   daylight saving) and `fetched_at_utc` is UTC. Both use plain `YYYY-MM-DD HH:MM:SS`, so
   Excel opens them as datetimes.
+- **`rain_15m_mm` is derived, not published.** It is the change in `curr_mm` over an
+  exact 15-minute step. When a reading is missing, or the daily total resets, the column
+  is left blank rather than attributing a longer gap to 15 minutes.
 - **Duplicates are prevented** by `(gauge, date_time_local)`; a repeated poll appends nothing.
 - **Out-of-order readings are dropped** rather than inserted, keeping each file
   chronological.
