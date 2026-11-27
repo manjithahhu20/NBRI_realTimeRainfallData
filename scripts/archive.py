@@ -322,6 +322,13 @@ def main() -> int:
         appended += 1
 
     if not args.dry_run:
+        for name in file_map.values():
+            path = data_dir / name
+            if not path.exists():
+                path.write_text(
+                    ",".join(CSV_COLUMNS) + "\n", encoding="utf-8", newline=""
+                )
+                created += 1
         stations_text = render_stations(records, file_map, root, fetched_at)
         meta_changed = write_if_changed(root / "stations.csv", stations_text)
         print(f"stations.csv {'updated' if meta_changed else 'unchanged'}")
