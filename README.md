@@ -108,7 +108,9 @@ It also carries each gauge's coordinates (`lat`, `lng`) and the file that holds 
 ```python
 import pandas as pd
 
-df = pd.read_csv("data/L14_Kendagolla.csv", parse_dates=["date_time", "fetched_at_utc"])
+df = pd.read_csv("data/L14_Kendagolla.csv")
+df["date_time"] = pd.to_datetime(df["date_time"], utc=True)      # stored as +05:30
+df["fetched_at_utc"] = pd.to_datetime(df["fetched_at_utc"], utc=True)
 ```
 
 ## Attribution
