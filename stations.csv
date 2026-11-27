@@ -42,7 +42,7 @@ KG070,KG070_Deraniyagala.csv,Deraniyagala,kegalle,Kegalle,deraniyagala,Deraniyag
 KG071,KG071_Dewalegama.csv,Dewalegama,kegalle,Kegalle,galigamuwa,Galigamuwa,walagama,Walagama,7.295152,80.319695,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 KG072,KG072_Hathgampala.csv,Hathgampala,kegalle,Kegalle,aranayaka,Aranayaka,hathgampola,Hathgampola,7.175135,80.432909,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 KG073,KG073_Hiriwadunna.csv,Hiriwadunna,kegalle,Kegalle,rambukkana,Rambukkana,yodagama,Yodagama,7.291026,80.386344,2026-11-27T01:48:16Z,2026-11-27 17:45:00
-KG074,KG074_Kinivita.csv,Kinivita,kegalle,Kegalle,warakapola,Warakapola,kivuldeniya,Kivuldeniya,7.161222,80.253389,2026-11-27T01:48:16Z,2026-11-27 17:30:00
+KG074,KG074_Kinivita.csv,Kinivita,kegalle,Kegalle,warakapola,Warakapola,kivuldeniya,Kivuldeniya,7.161222,80.253389,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 KG075,KG075_Poddenikanda.csv,Poddenikanda,kegalle,Kegalle,deraniyagala,Deraniyagala,poddenikanda,Poddenikanda,6.891156,80.407621,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 KG076,KG076_Poonahela.csv,Poonahela,kegalle,Kegalle,bulathkohupitiya,Bulathkohupitiya,wegalla,Wegalla,7.089026,80.311145,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 KG077,KG077_Waharaka.csv,Waharaka,kegalle,Kegalle,ruwanwella,Ruwanwella,daluwalana,Daluwalana,7.07473,80.19962,2026-11-27T01:48:16Z,2026-11-27 17:45:00
@@ -244,7 +244,7 @@ ML088,ML088_Hulangamuwa.csv,Hulangamuwa,matale,Matale,matale,Matale,hulangamuwa_
 ML089,ML089_Dombawela.csv,Dombawela,matale,Matale,matale,Matale,parana_dombawela,Parana Dombawela,7.549472,80.616399,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 ML090,ML090_Hapugaspitiya.csv,Hapugaspitiya,matale,Matale,ambanganga_korale,Ambanganga Korale,aluthwela,Aluthwela,7.549363,80.65447,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 ML091,ML091_Madaweragama.csv,Madaweragama,matale,Matale,rattota,Rattota,meda_weragama,Meda Weragama,7.48479,80.652381,2026-11-27T01:48:16Z,2026-11-27 17:45:00
-ML092,ML092_Nikal_Oya.csv,Nikal Oya,matale,Matale,rattota,Rattota,bodhikotuwa,Bodhikotuwa,7.507722,80.695194,2026-11-27T01:48:16Z,2026-11-27 17:30:00
+ML092,ML092_Nikal_Oya.csv,Nikal Oya,matale,Matale,rattota,Rattota,bodhikotuwa,Bodhikotuwa,7.507722,80.695194,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 ML093,ML093_Rattota.csv,Rattota,matale,Matale,rattota,Rattota,rattota,Rattota,7.516331,80.675922,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 ML094,ML094_Udupihilla.csv,Udupihilla,matale,Matale,ukuwela,Ukuwela,udupihilla,Udupihilla,7.4381,80.6099,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 ML096,ML096_Wehigala.csv,Wehigala,matale,Matale,ukuwela,Ukuwela,wehigala,Wehigala,7.407484,80.673246,2026-11-27T01:48:16Z,2026-11-27 17:45:00
@@ -264,7 +264,7 @@ NE114,NE114_Beramana.csv,Beramana,nuwara_eliya,Nuwara Eliya,kothmale(west),Kothm
 NE115,NE115_Fordyce_Estate.csv,Fordyce Estate,nuwara_eliya,Nuwara Eliya,norwood,Norwood,dickoya,Dickoya,6.859688,80.632586,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 NE116,NE116_Hapugasthalawa.csv,Hapugasthalawa,nuwara_eliya,Nuwara Eliya,kothmale(west),Kothmale (West),kaludemada,Kaludemada,7.056222,80.570083,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 NE117,NE117_Hapugoda.csv,Hapugoda,nuwara_eliya,Nuwara Eliya,ambagamuwa,Ambagamuwa,kehelwarawa,Kehelwarawa,6.961341,80.464971,2026-11-27T01:48:16Z,2026-11-27 17:45:00
-NE118,NE118_Kalaganwatta.csv,Kalaganwatta,nuwara_eliya,Nuwara Eliya,nildandahinna,Nildandahinna,ellakumbura,Ellakumbura,7.108121,80.898667,2026-11-27T01:48:16Z,2026-11-27 17:30:00
+NE118,NE118_Kalaganwatta.csv,Kalaganwatta,nuwara_eliya,Nuwara Eliya,nildandahinna,Nildandahinna,ellakumbura,Ellakumbura,7.108121,80.898667,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 NE119,NE119_Kalaweldeniya.csv,Kalaweldeniya,nuwara_eliya,Nuwara Eliya,ambagamuwa,Ambagamuwa,kalaweldeniya,Kalaweldeniya,6.947695,80.497742,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 NE120,NE120_Eskdale.csv,Eskdale,nuwara_eliya,Nuwara Eliya,nuwara_eliya,Nuwara Eliya,kandapola_central,Kandapola Central,7.005712,80.819084,2026-11-27T01:48:16Z,2026-11-27 17:45:00
 NE121,NE121_Kotagepitiya.csv,Kotagepitiya,nuwara_eliya,Nuwara Eliya,kothmale(west),Kothmale (West),kadadora,Kadadora,7.070694,80.604139,2026-11-27T01:48:16Z,2026-11-27 17:45:00
