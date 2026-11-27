@@ -22,15 +22,17 @@ would drop intervals, so this archive always uses the uncached `/api/embed/` pat
 ## Layout
 
 ```
-data/<gauge>.csv     one file per gauge, append-only
-stations.csv         gauge metadata index
-state/schema.json    fingerprint of the API's field set (written only when it changes)
-scripts/archive.py   the collector
+data/<gauge>_<location>.csv   one file per gauge, append-only
+stations.csv                  gauge metadata index
+state/schema.json             fingerprint of the API's field set (written only when it changes)
+scripts/archive.py            the collector
 ```
 
-Gauge IDs are used as filenames with any character outside `[A-Za-z0-9._-]` replaced by
-`_`, so `KEG/BUK/1024556` becomes `KEG_BUK_1024556.csv`. `stations.csv` maps every file
-back to its real ID.
+Filenames combine the gauge ID and its location, with any character outside
+`[A-Za-z0-9._-]` replaced by `_`, so `KEG/BUK/1024556` at *Algama* becomes
+`KEG_BUK_1024556_Algama.csv`. A filename is fixed when the file is created; if the
+provider later renames a gauge, the file keeps its original name and `stations.csv`
+shows the current location. `stations.csv` maps every file back to its real ID.
 
 ## Per-gauge CSV
 
@@ -103,7 +105,7 @@ date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_s
 ```python
 import pandas as pd
 
-df = pd.read_csv("data/L14.csv", parse_dates=["date_time", "fetched_at_utc"])
+df = pd.read_csv("data/L14_Kendagolla.csv", parse_dates=["date_time", "fetched_at_utc"])
 ```
 
 ## Attribution

@@ -124,27 +124,71 @@ def validate(records: list[dict]) -> None:
         raise RuntimeError(f"response is missing required keys: {sorted(missing)}")
 
 
-def safe_name(station_id: str) -> str:
-    name = SAFE_CHARS.sub("_", station_id).strip("._")
-    return (name or "station")[:80]
+def sanitize(value: str) -> str:
+    cleaned = SAFE_CHARS.sub("_", value or "")
+    return re.sub(r"_+", "_", cleaned).strip("._")
 
 
-def build_file_map(records: list[dict]) -> dict[str, str]:
-    bases: dict[str, str] = {}
+def legacy_name(station_id: str) -> str:
+    """Filename used before station names were added (id only)."""
+    name = SAFE_CHARS.sub("_", station_id).strip("._") or "station"
+    return name[:80] + ".csv"
+
+
+def desired_name(station_id: str, location: str) -> str:
+    base = sanitize(station_id) or "station"
+    place = sanitize(location)
+    if place:
+        base = f"{base}_{place[:40]}"
+    return base[:120] + ".csv"
+
+
+def load_meta(root: Path) -> dict[str, dict]:
+    meta: dict[str, dict] = {}
+    path = root / "stations.csv"
+    if path.exists():
+        with path.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle):
+                meta[str(row.get("id", ""))] = row
+    return meta
+
+
+def build_file_map(
+    records: list[dict], meta: dict[str, dict], data_dir: Path, dry_run: bool
+) -> tuple[dict[str, str], list[tuple[str, str]]]:
+    mapping: dict[str, str] = {}
+    renamed: list[tuple[str, str]] = []
+
     for record in records:
         station_id = str(record.get("id") or "").strip()
-        if station_id:
-            bases[station_id] = safe_name(station_id) + ".csv"
+        if not station_id:
+            continue
+
+        desired = desired_name(station_id, as_text(record.get("location")))
+        prior = as_text(meta.get(station_id, {}).get("file"))
+        chosen = desired
+
+        if prior and prior != desired:
+            prior_path = data_dir / prior
+            desired_path = data_dir / desired
+            if prior == legacy_name(station_id) and prior_path.exists() and not desired_path.exists():
+                if not dry_run:
+                    prior_path.rename(desired_path)
+                renamed.append((prior, desired))
+            elif prior_path.exists():
+                chosen = prior  # name already established; keep it stable
+
+        mapping[station_id] = chosen
 
     counts: dict[str, int] = {}
-    for name in bases.values():
+    for name in mapping.values():
         counts[name] = counts.get(name, 0) + 1
-
-    for station_id, name in list(bases.items()):
+    for station_id, name in list(mapping.items()):
         if counts[name] > 1:
             digest = hashlib.sha1(station_id.encode("utf-8")).hexdigest()[:6]
-            bases[station_id] = f"{name[:-4]}_{digest}.csv"
-    return bases
+            mapping[station_id] = f"{name[:-4]}_{digest}.csv"
+
+    return mapping, renamed
 
 
 def last_date_time(path: Path) -> str | None:
@@ -220,20 +264,15 @@ def check_schema(records: list[dict], root: Path, fetched_at: str) -> None:
         print(f"schema recorded ({len(keys)} keys)")
 
 
-def render_stations(records: list[dict], file_map: dict[str, str], root: Path, fetched_at: str) -> str:
-    existing: dict[str, dict] = {}
-    meta_path = root / "stations.csv"
-    if meta_path.exists():
-        with meta_path.open(encoding="utf-8", newline="") as handle:
-            for row in csv.DictReader(handle):
-                existing[str(row.get("id", ""))] = row
-
+def render_stations(
+    records: list[dict], file_map: dict[str, str], meta: dict[str, dict], fetched_at: str
+) -> str:
     rendered: list[dict] = []
     for record in sorted(records, key=lambda item: str(item.get("id", ""))):
         station_id = str(record.get("id") or "").strip()
         if not station_id:
             continue
-        prior = existing.get(station_id, {})
+        prior = meta.get(station_id, {})
         rendered.append(
             {
                 "id": station_id,
@@ -291,7 +330,10 @@ def main() -> int:
         print(f"::error::archive fetch failed: {exc}")
         return 1
 
-    file_map = build_file_map(records)
+    meta = load_meta(root)
+    file_map, renamed = build_file_map(records, meta, data_dir, args.dry_run)
+    if renamed:
+        print(f"renamed {len(renamed)} files to include the station name")
     check_schema(records, root, fetched_at)
 
     if not args.dry_run:
@@ -329,7 +371,7 @@ def main() -> int:
                     ",".join(CSV_COLUMNS) + "\n", encoding="utf-8", newline=""
                 )
                 created += 1
-        stations_text = render_stations(records, file_map, root, fetched_at)
+        stations_text = render_stations(records, file_map, meta, fetched_at)
         meta_changed = write_if_changed(root / "stations.csv", stations_text)
         print(f"stations.csv {'updated' if meta_changed else 'unchanged'}")
 
