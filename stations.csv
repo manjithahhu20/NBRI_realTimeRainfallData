@@ -190,7 +190,7 @@ M02,M02_Muruthalawa.csv,Muruthalawa,kandy,Kandy,yatinuwara,Yatinuwara,dehigama_e
 M03,M03_Alawwa.csv,Alawwa,kegalle,Kegalle,warakapola,Warakapola,akwatta,Akwatta,7.2601,80.2521,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 M04,M04_Warakapola.csv,Warakapola,kegalle,Kegalle,warakapola,Warakapola,dummaladeniya,Dummaladeniya,7.2261,80.1913,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 M05,M05_Dambadeniya.csv,Dambadeniya,kurunegala,Kurunegala,narammala,Narammala,dambadeniya_south,Dambadeniya South,7.3665,80.1501,2026-11-27T01:48:16Z,2026-11-27 11:30:00
-M06,M06_Weuda.csv,Weuda,kurunegala,Kurunegala,mawathagama,Mawathagama,bandaragala,Bandaragala,7.4123,80.4828,2026-11-27T01:48:16Z,2026-11-27 11:00:00
+M06,M06_Weuda.csv,Weuda,kurunegala,Kurunegala,mawathagama,Mawathagama,bandaragala,Bandaragala,7.4123,80.4828,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 M07,M07_Damanayaya.csv,Damanayaya,matale,Matale,naula,Naula,dambagolla,Dambagolla,7.7917,80.8025,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 M08,M08_Katugastota.csv,Katugastota,kandy,Kandy,pathadumbara,Pathadumbara,molagodayawatta,Molagodayawatta,7.3412,80.6202,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 M09,M09_Kalugala.csv,Kalugala,nuwara_eliya,Nuwara Eliya,ambagamuwa,Ambagamuwa,pittawala,Pittawala,6.9945,80.4477,2026-11-27T01:48:16Z,2026-11-27 11:30:00
@@ -343,7 +343,7 @@ R67,R67_Omalpe.csv,Omalpe,ratnapura,Ratnapura,kolonna,Kolonna,omalpe,Omalpe,6.32
 R68,R68_Pinnawala.csv,Pinnawala,ratnapura,Ratnapura,imbulpe,Imbulpe,udagama,Udagama,6.7207,80.6839,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 R69,R69_Rambuka_MV.csv,Rambuka MV,ratnapura,Ratnapura,kalawana,Kalawana,kathlana,Kathlana,6.4492,80.5121,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 R70,R70_Saman_Pedasa.csv,Saman Pedasa,ratnapura,Ratnapura,ratnapura,Ratnapura,weralupa,Weralupa,6.6918,80.3896,2026-11-27T01:48:16Z,2026-11-27 11:30:00
-R71,R71_Suriyakanda.csv,Suriyakanda,ratnapura,Ratnapura,kolonna,Kolonna,buluthota,Buluthota,6.4372,80.6351,2026-11-27T01:48:16Z,2026-11-24 12:45:00
+R71,R71_Suriyakanda.csv,Suriyakanda,ratnapura,Ratnapura,kolonna,Kolonna,buluthota,Buluthota,6.4372,80.6351,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 R72,R72_Ulinduwawa.csv,Ulinduwawa,ratnapura,Ratnapura,kolonna,Kolonna,boraluwageaina,Boraluwageaina,6.3683,80.6584,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 R73,R73_Waleboda.csv,Waleboda,ratnapura,Ratnapura,imbulpe,Imbulpe,kattadikanda,Kattadikanda,6.7288,80.6383,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 R74,R74_Kongasthenna.csv,Kongasthenna,ratnapura,Ratnapura,weligepola,Weligepola,kongastenna,Kongastenna,6.595,80.7183,2026-11-27T01:48:16Z,2026-10-04 14:15:00
