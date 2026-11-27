@@ -23,7 +23,7 @@ BD022,BD022_Thaldena.csv,Thaldena,badulla,Badulla,meegahakivula,Meegahakivula,hu
 BD023,BD023_Udukumbalwela.csv,Udukumbalwela,badulla,Badulla,ella,Ella,dowa,Dowa,6.85525,81.0199444,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 BD024,BD024_Walgolla.csv,Walgolla,badulla,Badulla,passara,Passara,welgolla,Welgolla,6.980139,81.145083,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 BD078,BD078_Lucky_Land.csv,Lucky Land,badulla,Badulla,uva-paranagama,Uva-Paranagama,alagolla,Alagolla,6.988805,80.923306,2026-11-27T01:48:16Z,2026-11-27 06:00:00
-CL025,CL025_Kosgama.csv,Kosgama,colombo,Colombo,seethawaka,Seethawaka,ihala_kosgama_north,Ihala Kosgama North,6.95009,80.14104,2026-11-27T01:48:16Z,2026-11-27 15:30:00
+CL025,CL025_Kosgama.csv,Kosgama,colombo,Colombo,seethawaka,Seethawaka,ihala_kosgama_north,Ihala Kosgama North,6.95009,80.14104,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 CL104,CL104_Waga-Halpe_Estate.csv,Waga-Halpe Estate,colombo,Colombo,padukka,Padukka,waga_east,Waga East,6.853771,80.143151,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 GL026,GL026_Akmeemana.csv,Akmeemana,galle,Galle,yakkalamulla,Yakkalamulla,udubattawa_west,Udubattawa West,6.086628,80.293526,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 GL027,GL027_Manampita.csv,Manampita,galle,Galle,niyagama,Niyagama,maraggoda,Maraggoda,6.263133,80.263913,2026-11-27T01:48:16Z,2026-11-27 15:45:00
@@ -113,7 +113,7 @@ L21,L21_Ranwanguhawa.csv,Ranwanguhawa,badulla,Badulla,haldummulla,Haldummulla,ra
 L22,L22_Norwood.csv,Norwood,nuwara_eliya,Nuwara Eliya,norwood,Norwood,norwood,Norwood,6.8367,80.6054,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 L23,L23_Hanguranketha.csv,Hanguranketha,nuwara_eliya,Nuwara Eliya,hanguranketha,Hanguranketha,pallemaluwa,Pallemaluwa,7.1804,80.7712,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 L24,L24_St._Leonard.csv,St. Leonard,nuwara_eliya,Nuwara Eliya,walapane,Walapane,st._leonard,St. Leonard,7.0006,80.8619,2026-11-27T01:48:16Z,2026-11-27 15:45:00
-L25,L25_Holbrook.csv,Holbrook,nuwara_eliya,Nuwara Eliya,thalawakale,Thalawakale,nagasena,Nagasena,6.8817,80.6918,2026-11-27T01:48:16Z,2026-11-27 15:15:00
+L25,L25_Holbrook.csv,Holbrook,nuwara_eliya,Nuwara Eliya,thalawakale,Thalawakale,nagasena,Nagasena,6.8817,80.6918,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 L26,L26_Upcott.csv,Upcott,nuwara_eliya,Nuwara Eliya,norwood,Norwood,alten,Alten,6.7754,80.6248,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 L27,L27_Great_Western.csv,Great Western,nuwara_eliya,Nuwara Eliya,thalawakale,Thalawakale,great_western,Great Western,6.9512,80.6819,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 L28,L28_Hunugal_Oya.csv,Hunugal Oya,nuwara_eliya,Nuwara Eliya,kothmale(west),Kothmale (West),thelissagala,Thelissagala,7.0258,80.5917,2026-11-27T01:48:16Z,2026-11-27 15:00:00
@@ -351,7 +351,7 @@ R75,R75_Wewelwaththa.csv,Wewelwaththa,ratnapura,Ratnapura,ratnapura,Ratnapura,ba
 RT127,RT127_Delwala.csv,Delwala,ratnapura,Ratnapura,nivithigala,Nivithigala,doloswalakanda,Doloswalakanda,6.54124,80.483865,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 RT128,RT128_Egoda_waleboda.csv,Egoda waleboda,ratnapura,Ratnapura,balangoda,Balangoda,egoda_waleboda,Egoda Waleboda,6.721414,80.610459,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 RT129,RT129_Gileemale.csv,Gileemale,ratnapura,Ratnapura,ratnapura,Ratnapura,gileemale_south,Gileemale South,6.742078,80.447523,2026-11-27T01:48:16Z,2026-11-27 15:45:00
-RT130,RT130_Halpe.csv,Halpe,ratnapura,Ratnapura,imbulpe,Imbulpe,halpe,Halpe,6.730893,80.825408,2026-11-27T01:48:16Z,2026-11-27 15:30:00
+RT130,RT130_Halpe.csv,Halpe,ratnapura,Ratnapura,imbulpe,Imbulpe,halpe,Halpe,6.730893,80.825408,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 RT131,RT131_Hindurangala.csv,Hindurangala,ratnapura,Ratnapura,kiriella,Kiriella,handukanda,Handukanda,6.754047,80.262238,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 RT132,RT132_Karandana.csv,Karandana,ratnapura,Ratnapura,eheliyagoda,Eheliyagoda,nugadanda,Nugadanda,6.759809,80.195267,2026-11-27T01:48:16Z,2026-11-18 02:30:00
 RT133,RT133_Makandura.csv,Makandura,ratnapura,Ratnapura,godakawela,Godakawela,makandura,Makandura,6.552683,80.629939,2026-11-27T01:48:16Z,2026-11-27 15:45:00
