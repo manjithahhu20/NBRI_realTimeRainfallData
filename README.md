@@ -78,7 +78,7 @@ date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_s
 ## How it runs
 
 - `.github/workflows/archive.yml` fetches, appends, and commits using the repository's
-  own `GITHUB_TOKEN`. It also runs on a 30-minute GitHub schedule as a safety net.
+  own `GITHUB_TOKEN`. It also runs on a GitHub schedule as a safety net.
 - cron-job.org dispatches the workflow every 5 minutes via the GitHub API. The PAT used
   there is a fine-grained token restricted to this repository with **Actions: Read and
   write** (plus **Contents: Read**); it cannot push code.

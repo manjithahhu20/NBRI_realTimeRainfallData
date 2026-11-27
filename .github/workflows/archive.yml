@@ -3,7 +3,7 @@ name: archive-rainfall
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *" # safety net if cron-job.org stops firing; remove if unwanted
+    - cron: "*/5 * * * *" # stopgap: 5-min coverage until the cron-job.org trigger is live
 
 concurrency:
   group: archive-rainfall
