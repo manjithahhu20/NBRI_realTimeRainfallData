@@ -1,3 +1,4 @@
 date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_status,s_status,s_status_error,live_status_label
 2026-11-27 07:15:00,2026-11-27T01:48:16Z,32.00,,32.00,128.20,143.80,0.00,1,True,True,False,Normal
 2026-11-27 07:30:00,2026-11-27T02:07:23Z,32.00,,32.00,128.20,143.80,0.00,1,True,True,False,Normal
+2026-11-27 07:45:00,2026-11-27T02:18:49Z,32.00,,32.00,128.20,143.80,0.00,1,True,True,False,Normal
