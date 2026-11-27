@@ -329,7 +329,7 @@ R53,R53_Pallegama.csv,Pallegama,matara,Matara,kotapola,Kotapola,pallegama_north,
 R54,R54_Bengamuwa.csv,Bengamuwa,matara,Matara,pasgoda,Pasgoda,bengamuwa_west,Bengamuwa West,6.2607,80.5971,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 R55,R55_Urubokka.csv,Urubokka,matara,Matara,pasgoda,Pasgoda,urubokka,Urubokka,6.2939,80.6312,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 R56,R56_Madakanda.csv,Madakanda,hambantota,Hambantota,katuwana,Katuwana,medakanda,Medakanda,6.2949,80.6729,2026-11-27T01:48:16Z,2026-11-27 11:45:00
-R57,R57_Walasmulla.csv,Walasmulla,hambantota,Hambantota,okewela,Okewela,udadeniya,Udadeniya,6.1517,80.6729,2026-11-27T01:48:16Z,2026-11-27 10:45:00
+R57,R57_Walasmulla.csv,Walasmulla,hambantota,Hambantota,okewela,Okewela,udadeniya,Udadeniya,6.1517,80.6729,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 R58,R58_Warapitiya.csv,Warapitiya,hambantota,Hambantota,walasmulla,Walasmulla,warapitiya,Warapitiya,6.2187,80.63608,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 R59,R59_Dewathura_Pri.csv,Dewathura Pri.,moneragala,Moneragala,badalkumbura,Badalkumbura,dewathura,Dewathura,6.8603,81.1411,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 R60,R60_Yalkumbura.csv,Yalkumbura,moneragala,Moneragala,bibile,Bibile,ethanawatta,Ethanawatta,7.1135,81.2148,2026-11-27T01:48:16Z,2026-11-27 11:45:00
@@ -352,7 +352,7 @@ RT127,RT127_Delwala.csv,Delwala,ratnapura,Ratnapura,nivithigala,Nivithigala,dolo
 RT128,RT128_Egoda_waleboda.csv,Egoda waleboda,ratnapura,Ratnapura,balangoda,Balangoda,egoda_waleboda,Egoda Waleboda,6.721414,80.610459,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 RT129,RT129_Gileemale.csv,Gileemale,ratnapura,Ratnapura,ratnapura,Ratnapura,gileemale_south,Gileemale South,6.742078,80.447523,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 RT130,RT130_Halpe.csv,Halpe,ratnapura,Ratnapura,imbulpe,Imbulpe,halpe,Halpe,6.730893,80.825408,2026-11-27T01:48:16Z,2026-11-27 11:45:00
-RT131,RT131_Hindurangala.csv,Hindurangala,ratnapura,Ratnapura,kiriella,Kiriella,handukanda,Handukanda,6.754047,80.262238,2026-11-27T01:48:16Z,2026-11-27 11:30:00
+RT131,RT131_Hindurangala.csv,Hindurangala,ratnapura,Ratnapura,kiriella,Kiriella,handukanda,Handukanda,6.754047,80.262238,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 RT132,RT132_Karandana.csv,Karandana,ratnapura,Ratnapura,eheliyagoda,Eheliyagoda,nugadanda,Nugadanda,6.759809,80.195267,2026-11-27T01:48:16Z,2026-11-18 02:30:00
 RT133,RT133_Makandura.csv,Makandura,ratnapura,Ratnapura,godakawela,Godakawela,makandura,Makandura,6.552683,80.629939,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 RT134,RT134_Pimbura.csv,Pimbura,ratnapura,Ratnapura,ayagama,Ayagama,pimbura,Pimbura,6.575342,80.366231,2026-11-27T01:48:16Z,2026-11-27 11:45:00
@@ -378,7 +378,7 @@ S03,S03_Boragass_Silmiyapura.csv,"Boragass, Silmiyapura",badulla,Badulla,welimad
 S04,S04_Udakanda.csv,Udakanda,nuwara_eliya,Nuwara Eliya,hanguranketha,Hanguranketha,udakanda,Udakanda,7.161944,80.811714,2026-11-27T01:48:16Z,2026-11-27 11:30:00
 S05,S05_Pooliyadda.csv,Pooliyadda,kandy,Kandy,pathahewaheta,Pathahewaheta,pooliyadda,Pooliyadda,7.244475,80.657695,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 S06,S06_Digana.csv,Digana,kandy,Kandy,kundasale,Kundasale,rajawella_north,Rajawella North,7.29618,80.736128,2026-11-27T01:48:16Z,2026-11-27 11:45:00
-S07,S07_Maweekumbura.csv,Maweekumbura,kandy,Kandy,udunuwara,Udunuwara,maveekumbura_south,Maveekumbura South,7.193092,80.537735,2026-11-27T01:48:16Z,2026-11-27 11:15:00
+S07,S07_Maweekumbura.csv,Maweekumbura,kandy,Kandy,udunuwara,Udunuwara,maveekumbura_south,Maveekumbura South,7.193092,80.537735,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 S08,S08_Kalugaloya.csv,Kalugaloya,kandy,Kandy,udadumbara,Udadumbara,kalugaloya,Kalugaloya,7.384597,80.897076,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 S09,S09_Dunkalawaththa.csv,Dunkalawaththa,matale,Matale,matale,Matale,dorakumbura,Dorakumbura,7.5094,80.6287,2026-11-27T01:48:16Z,2026-11-27 11:45:00
 S10,S10_Bandarapola_Tea_Factory.csv,Bandarapola Tea Factory,matale,Matale,rattota,Rattota,kandenuwara_east,Kandenuwara East,7.453075,80.668908,2026-11-27T01:48:16Z,2026-04-18 19:15:00
