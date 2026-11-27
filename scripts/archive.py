@@ -52,6 +52,8 @@ CSV_COLUMNS = [
     "s_status",
     "s_status_error",
     "live_status_label",
+    "lat",
+    "lng",
 ]
 
 META_COLUMNS = [
@@ -232,6 +234,43 @@ def as_text(value) -> str:
     return "" if value is None else str(value)
 
 
+def ensure_coordinate_columns(path: Path, lat: str, lng: str) -> bool:
+    """Add lat/lng to a file written before those columns existed."""
+    if not path.exists() or path.stat().st_size == 0:
+        return False
+
+    with path.open(encoding="utf-8", newline="") as handle:
+        header = handle.readline().rstrip("\r\n")
+    if header == ",".join(CSV_COLUMNS):
+        return False
+
+    with path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.reader(handle))
+    if not rows:
+        return False
+
+    width = len(CSV_COLUMNS)
+    body: list[list[str]] = []
+    for row in rows[1:]:
+        if not row:
+            continue
+        while len(row) < width:
+            row.append("")
+        row = row[:width]
+        if lat and not row[-2]:
+            row[-2] = lat
+        if lng and not row[-1]:
+            row[-1] = lng
+        body.append(row)
+
+    buffer = io.StringIO()
+    writer = csv.writer(buffer, lineterminator="\n")
+    writer.writerow(CSV_COLUMNS)
+    writer.writerows(body)
+    path.write_text(buffer.getvalue(), encoding="utf-8", newline="")
+    return True
+
+
 def append_row(path: Path, record: dict, fetched_at: str) -> bool:
     """Append one row. Returns True if the file was created."""
     created = not path.exists() or path.stat().st_size == 0
@@ -392,14 +431,24 @@ def main() -> int:
     appended = 0
     created = 0
     skipped = 0
+    migrated = 0
     for record in records:
         station_id = str(record.get("id") or "").strip()
-        date_time = record.get("date_time")
-        if not station_id or not isinstance(date_time, str) or not date_time:
+        if not station_id:
             skipped += 1
             continue
 
         path = data_dir / file_map[station_id]
+        if not args.dry_run and ensure_coordinate_columns(
+            path, as_text(record.get("lat")), as_text(record.get("lng"))
+        ):
+            migrated += 1
+
+        date_time = record.get("date_time")
+        if not isinstance(date_time, str) or not date_time:
+            skipped += 1
+            continue
+
         last = last_date_time(path)
         if last is not None and bare_timestamp(date_time) <= bare_timestamp(last):
             skipped += 1
@@ -427,7 +476,7 @@ def main() -> int:
 
     print(
         f"stations={len(records)} appended={appended} created_files={created} "
-        f"skipped={skipped} dry_run={args.dry_run}"
+        f"skipped={skipped} migrated_headers={migrated} dry_run={args.dry_run}"
     )
     emit_output(appended if not args.dry_run else 0)
     return 0

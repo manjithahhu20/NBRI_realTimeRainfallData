@@ -37,7 +37,7 @@ shows the current location. `stations.csv` maps every file back to its real ID.
 ## Per-gauge CSV
 
 ```
-date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_status,s_status,s_status_error,live_status_label
+date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_status,s_status,s_status_error,live_status_label,lat,lng
 ```
 
 | Column | Meaning |
@@ -51,6 +51,7 @@ date_time,fetched_at_utc,curr_mm,1h_mm,24h_mm,48h_mm,72h_mm,diff_mm,r_status,c_s
 | `r_status` | Reading status as published (observed `0` = no data, `1` = normal, `2` = warning) |
 | `c_status`, `s_status`, `s_status_error` | Connection/sensor flags as published |
 | `live_status_label` | Site's human-readable status, e.g. `Normal`, `No Data (24 hours)`, `Warning Level 1` |
+| `lat`, `lng` | Gauge coordinates (WGS84 degrees), repeated on every row so each file is self-contained |
 
 `stations.csv` columns: `id,file,location,district_en,dsd_en,gnd_en,lat,lng,first_seen_utc,last_seen_date_time`.
 It also carries each gauge's coordinates (`lat`, `lng`) and the file that holds its readings.
@@ -77,7 +78,7 @@ It also carries each gauge's coordinates (`lat`, `lng`) and the file that holds 
   to analysis.
 - **Stale gauges are still archived.** The feed includes gauges that last reported
   months ago; their rows simply stop advancing.
-- **Volume:** roughly 96 rows per gauge per day, about 1.5 GB per year across all gauges.
+- **Volume:** roughly 96 rows per gauge per day, about 1.5–1.8 GB per year across all gauges.
   Commits are created only when new data exists (at most ~96 per day).
 
 ## How it runs
