@@ -1,7 +1,7 @@
 id,file,location,district_en,dsd_en,gnd_en,lat,lng,first_seen_utc,last_seen_date_time
 BD001,BD001_Arawa.csv,Arawa,Badulla,Rideemaliyadda,Arawa,7.163389,81.085111,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 BD002,BD002_Beragala.csv,Beragala,Badulla,Haldummulla,Beragala,6.761611,80.913167,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
-BD003,BD003_Bibilegama.csv,Bibilegama,Badulla,Passara,Bibilegama West,6.894722,81.141139,2026-11-27T01:48:16Z,2026-11-27 07:45:00+05:30
+BD003,BD003_Bibilegama.csv,Bibilegama,Badulla,Passara,Bibilegama West,6.894722,81.141139,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 BD005,BD005_Helapupula.csv,Helapupula,Badulla,Ella,Pupula,6.891028,81.092333,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 BD006,BD006_Hopton.csv,Hopton,Badulla,Lunugala,Yapamma,7.002611,81.197361,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 BD007,BD007_Kolongasthanne.csv,Kolongasthanne,Badulla,Haldummulla,Kolongasthenna,6.692389,81.046452,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
@@ -339,7 +339,7 @@ R63,R63_Endane.csv,Endane,Ratnapura,Kahawatta,Endana,6.5193,80.5306,2026-11-27T0
 R64,R64_Erathna_MV.csv,Erathna MV,Ratnapura,Kuruvita,Erathna,6.8342,80.4089,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 R65,R65_Kaltota.csv,Kaltota,Ratnapura,Kalthota,Thanjanthenna,6.6432,80.8658,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 R66,R66_Namunuthenna.csv,Namunuthenna,Ratnapura,Ayagama,Dethabada  Kanda,6.6999,80.26907,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
-R67,R67_Omalpe.csv,Omalpe,Ratnapura,Kolonna,Omalpe,6.3297,80.7015,2026-11-27T01:48:16Z,2026-11-26 13:45:00+05:30
+R67,R67_Omalpe.csv,Omalpe,Ratnapura,Kolonna,Omalpe,6.3297,80.7015,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 R68,R68_Pinnawala.csv,Pinnawala,Ratnapura,Imbulpe,Udagama,6.7207,80.6839,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 R69,R69_Rambuka_MV.csv,Rambuka MV,Ratnapura,Kalawana,Kathlana,6.4492,80.5121,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
 R70,R70_Saman_Pedasa.csv,Saman Pedasa,Ratnapura,Ratnapura,Weralupa,6.6918,80.3896,2026-11-27T01:48:16Z,2026-11-27 08:00:00+05:30
