@@ -23,7 +23,7 @@ BD022,BD022_Thaldena.csv,Thaldena,Badulla,Meegahakivula,Hunuketapitiya,7.0905,81
 BD023,BD023_Udukumbalwela.csv,Udukumbalwela,Badulla,Ella,Dowa,6.85525,81.0199444,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 BD024,BD024_Walgolla.csv,Walgolla,Badulla,Passara,Welgolla,6.980139,81.145083,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 BD078,BD078_Lucky_Land.csv,Lucky Land,Badulla,Uva-Paranagama,Alagolla,6.988805,80.923306,2026-11-27T01:48:16Z,2026-11-27 06:00:00
-CL025,CL025_Kosgama.csv,Kosgama,Colombo,Seethawaka,Ihala Kosgama North,6.95009,80.14104,2026-11-27T01:48:16Z,2026-11-27 09:30:00
+CL025,CL025_Kosgama.csv,Kosgama,Colombo,Seethawaka,Ihala Kosgama North,6.95009,80.14104,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 CL104,CL104_Waga-Halpe_Estate.csv,Waga-Halpe Estate,Colombo,Padukka,Waga East,6.853771,80.143151,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 GL026,GL026_Akmeemana.csv,Akmeemana,Galle,Yakkalamulla,Udubattawa West,6.086628,80.293526,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 GL027,GL027_Manampita.csv,Manampita,Galle,Niyagama,Maraggoda,6.263133,80.263913,2026-11-27T01:48:16Z,2026-11-27 09:45:00
@@ -39,7 +39,7 @@ KEG/BUK/1024556,KEG_BUK_1024556_Algama.csv,Algama,Kegalle,Warakapola,Algama,7.15
 KG068,KG068_Anhettigama.csv,Anhettigama,Kegalle,Deraniyagala,Anhettigama,6.924695,80.377176,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KG069,KG069_Dedugala.csv,Dedugala,Kegalle,Bulathkohupitiya,Dedugala,7.099308,80.399473,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KG070,KG070_Deraniyagala.csv,Deraniyagala,Kegalle,Deraniyagala,Deraniyagala,6.932005,80.337253,2026-11-27T01:48:16Z,2026-11-27 09:45:00
-KG071,KG071_Dewalegama.csv,Dewalegama,Kegalle,Galigamuwa,Walagama,7.295152,80.319695,2026-11-27T01:48:16Z,2026-11-27 09:30:00
+KG071,KG071_Dewalegama.csv,Dewalegama,Kegalle,Galigamuwa,Walagama,7.295152,80.319695,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KG072,KG072_Hathgampala.csv,Hathgampala,Kegalle,Aranayaka,Hathgampola,7.175135,80.432909,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KG073,KG073_Hiriwadunna.csv,Hiriwadunna,Kegalle,Rambukkana,Yodagama,7.291026,80.386344,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KG074,KG074_Kinivita.csv,Kinivita,Kegalle,Warakapola,Kivuldeniya,7.161222,80.253389,2026-11-27T01:48:16Z,2026-11-27 09:45:00
@@ -60,7 +60,7 @@ KN057,KN057_Gomare.csv,Gomare,Kandy,Panvila,Thawalanthenna,7.405944,80.778306,20
 KN058,KN058_Udathalavinna.csv,Udathalavinna,Kandy,Pathadumbara,Udathalavinna,7.338899,80.646663,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KN059,KN059_Kahawatta_Hospital.csv,Kahawatta Hospital,Kandy,Doluwa,Kahawatta,7.161472,80.604611,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KN060,KN060_Kalunthenna.csv,Kalunthenna,Kandy,Udadumbara,Udapitawala,7.306139,80.903389,2026-11-27T01:48:16Z,2026-11-27 09:45:00
-KN061,KN061_Dunuwila.csv,Dunuwila,Kandy,Medadumbara,Sandasiri Dunuvila,7.246306,80.822389,2026-11-27T01:48:16Z,2026-11-27 09:30:00
+KN061,KN061_Dunuwila.csv,Dunuwila,Kandy,Medadumbara,Sandasiri Dunuvila,7.246306,80.822389,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KN062,KN062_Beddegama.csv,Beddegama,Kandy,Panvila,Beddegama,7.381333,80.752667,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KN063,KN063_Puwakgahadiwela.csv,Puwakgahadiwela,Kandy,Medadumbara,Puwakgahadiwela,7.264972,80.815583,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 KN064,KN064_Hasalaka.csv,Hasalaka,Kandy,Minipe,Hasalaka,7.358278,80.949611,2026-11-27T01:48:16Z,2026-11-27 09:45:00
@@ -242,7 +242,7 @@ ML079,ML079_Sembuwatta.csv,Sembuwatta,Matale,Ukuwela,Elkaduwa Watta,7.431713,80.
 ML087,ML087_Dankanda.csv,Dankanda,Matale,Rattota,Polwattakanda,7.535083,80.699111,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 ML088,ML088_Hulangamuwa.csv,Hulangamuwa,Matale,Matale,Hulangamuwa North,7.463938,80.617473,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 ML089,ML089_Dombawela.csv,Dombawela,Matale,Matale,Parana Dombawela,7.549472,80.616399,2026-11-27T01:48:16Z,2026-11-27 09:45:00
-ML090,ML090_Hapugaspitiya.csv,Hapugaspitiya,Matale,Ambanganga Korale,Aluthwela,7.549363,80.65447,2026-11-27T01:48:16Z,2026-11-27 09:30:00
+ML090,ML090_Hapugaspitiya.csv,Hapugaspitiya,Matale,Ambanganga Korale,Aluthwela,7.549363,80.65447,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 ML091,ML091_Madaweragama.csv,Madaweragama,Matale,Rattota,Meda Weragama,7.48479,80.652381,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 ML092,ML092_Nikal_Oya.csv,Nikal Oya,Matale,Rattota,Bodhikotuwa,7.507722,80.695194,2026-11-27T01:48:16Z,2026-11-27 09:45:00
 ML093,ML093_Rattota.csv,Rattota,Matale,Rattota,Rattota,7.516331,80.675922,2026-11-27T01:48:16Z,2026-11-27 09:45:00
