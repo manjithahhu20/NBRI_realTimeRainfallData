@@ -4,7 +4,7 @@ BD002,BD002_Beragala.csv,Beragala,badulla,Badulla,haldummulla,Haldummulla,beraga
 BD003,BD003_Bibilegama.csv,Bibilegama,badulla,Badulla,passara,Passara,bibilegama_west,Bibilegama West,6.894722,81.141139,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 BD005,BD005_Helapupula.csv,Helapupula,badulla,Badulla,ella,Ella,pupula,Pupula,6.891028,81.092333,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 BD006,BD006_Hopton.csv,Hopton,badulla,Badulla,lunugala,Lunugala,yapamma,Yapamma,7.002611,81.197361,2026-11-27T01:48:16Z,2026-11-27 16:00:00
-BD007,BD007_Kolongasthanne.csv,Kolongasthanne,badulla,Badulla,haldummulla,Haldummulla,kolongasthenna,Kolongasthenna,6.692389,81.046452,2026-11-27T01:48:16Z,2026-11-27 15:30:00
+BD007,BD007_Kolongasthanne.csv,Kolongasthanne,badulla,Badulla,haldummulla,Haldummulla,kolongasthenna,Kolongasthenna,6.692389,81.046452,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 BD008,BD008_Kanawarella_MV.csv,Kanawarella MV,badulla,Badulla,passara,Passara,kanawerella_west,Kanawerella West,6.908694,81.130972,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 BD009,BD009_Wewathanna.csv,Wewathanna,badulla,Badulla,bandarawela,Bandarawela,wewathenna,Wewathenna,6.845472,80.979778,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 BD010,BD010_Medahinna.csv,Medahinna,badulla,Badulla,uva-paranagama,Uva-Paranagama,korandekumbura,Korandekumbura,6.96086,80.864806,2026-11-27T01:48:16Z,2026-11-27 16:00:00
@@ -258,7 +258,7 @@ MT103,MT103_Kirinda_Puhulwella.csv,Kirinda Puhulwella,matara,Matara,kirinda_puhu
 MT105,MT105_Mapalana.csv,Mapalana,matara,Matara,kamburupitiya,Kamburupitiya,ullala_east,Ullala East,6.064722,80.583757,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 MT107,MT107_Pitabeddara.csv,Pitabeddara,matara,Matara,pitabeddara,Pitabeddara,pitabaddera,Pitabaddera,6.19885,80.467416,2026-11-27T01:48:16Z,2026-11-27 15:45:00
 MT108,MT108_Pitawalgamuwa.csv,Pitawalgamuwa,matara,Matara,hakmana,Hakmana,denagama_north,Denagama North,6.11775,80.636142,2026-11-27T01:48:16Z,
-MT109,MT109_Paragala.csv,Paragala,matara,Matara,kamburupitiya,Kamburupitiya,ihala_vitiyala_west,Ihala Vitiyala West,6.03799,80.53199,2026-11-27T01:48:16Z,2026-11-27 15:45:00
+MT109,MT109_Paragala.csv,Paragala,matara,Matara,kamburupitiya,Kamburupitiya,ihala_vitiyala_west,Ihala Vitiyala West,6.03799,80.53199,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 MT110,MT110_Vilpita.csv,Vilpita,matara,Matara,athuraliya,Athuraliya,vilpita_east1,Vilpita East 1,6.091789,80.530632,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 NE114,NE114_Beramana.csv,Beramana,nuwara_eliya,Nuwara Eliya,kothmale(west),Kothmale (West),beramana,Beramana,6.993972,80.62675,2026-11-27T01:48:16Z,2026-11-27 16:00:00
 NE115,NE115_Fordyce_Estate.csv,Fordyce Estate,nuwara_eliya,Nuwara Eliya,norwood,Norwood,dickoya,Dickoya,6.859688,80.632586,2026-11-27T01:48:16Z,2026-11-27 16:00:00
