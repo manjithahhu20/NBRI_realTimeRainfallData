@@ -5,7 +5,7 @@ BD003,BD003_Bibilegama.csv,Bibilegama,badulla,Badulla,passara,Passara,bibilegama
 BD005,BD005_Helapupula.csv,Helapupula,badulla,Badulla,ella,Ella,pupula,Pupula,6.891028,81.092333,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 BD006,BD006_Hopton.csv,Hopton,badulla,Badulla,lunugala,Lunugala,yapamma,Yapamma,7.002611,81.197361,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 BD007,BD007_Kolongasthanne.csv,Kolongasthanne,badulla,Badulla,haldummulla,Haldummulla,kolongasthenna,Kolongasthenna,6.692389,81.046452,2026-11-27T01:48:16Z,2026-11-28 07:45:00
-BD008,BD008_Kanawarella_MV.csv,Kanawarella MV,badulla,Badulla,passara,Passara,kanawerella_west,Kanawerella West,6.908694,81.130972,2026-11-27T01:48:16Z,2026-11-28 07:30:00
+BD008,BD008_Kanawarella_MV.csv,Kanawarella MV,badulla,Badulla,passara,Passara,kanawerella_west,Kanawerella West,6.908694,81.130972,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 BD009,BD009_Wewathanna.csv,Wewathanna,badulla,Badulla,bandarawela,Bandarawela,wewathenna,Wewathenna,6.845472,80.979778,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 BD010,BD010_Medahinna.csv,Medahinna,badulla,Badulla,uva-paranagama,Uva-Paranagama,korandekumbura,Korandekumbura,6.96086,80.864806,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 BD011,BD011_Verellapathana.csv,Verellapathana,badulla,Badulla,lunugala,Lunugala,madulsima,Madulsima,7.035306,81.152611,2026-11-27T01:48:16Z,2026-11-28 07:45:00
@@ -37,7 +37,7 @@ HT034,HT034_Mulgirigala.csv,Mulgirigala,hambantota,Hambantota,weeraketiya,Weerak
 HT106,HT106_Katuwana.csv,Katuwana,hambantota,Hambantota,katuwana,Katuwana,wathukanda,Wathukanda,6.256833,80.665,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 KEG/BUK/1024556,KEG_BUK_1024556_Algama.csv,Algama,kegalle,Kegalle,warakapola,Warakapola,algama,Algama,7.155194,80.164222,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 KG068,KG068_Anhettigama.csv,Anhettigama,kegalle,Kegalle,deraniyagala,Deraniyagala,anhettigama,Anhettigama,6.924695,80.377176,2026-11-27T01:48:16Z,2026-11-28 07:45:00
-KG069,KG069_Dedugala.csv,Dedugala,kegalle,Kegalle,bulathkohupitiya,Bulathkohupitiya,dedugala,Dedugala,7.099308,80.399473,2026-11-27T01:48:16Z,2026-11-28 07:30:00
+KG069,KG069_Dedugala.csv,Dedugala,kegalle,Kegalle,bulathkohupitiya,Bulathkohupitiya,dedugala,Dedugala,7.099308,80.399473,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 KG070,KG070_Deraniyagala.csv,Deraniyagala,kegalle,Kegalle,deraniyagala,Deraniyagala,deraniyagala,Deraniyagala,6.932005,80.337253,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 KG071,KG071_Dewalegama.csv,Dewalegama,kegalle,Kegalle,galigamuwa,Galigamuwa,walagama,Walagama,7.295152,80.319695,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 KG072,KG072_Hathgampala.csv,Hathgampala,kegalle,Kegalle,aranayaka,Aranayaka,hathgampola,Hathgampola,7.175135,80.432909,2026-11-27T01:48:16Z,2026-11-28 07:45:00
@@ -241,7 +241,7 @@ MG113,MG113_Maragalakanda.csv,Maragalakanda,moneragala,Moneragala,moneragala,Mon
 ML079,ML079_Sembuwatta.csv,Sembuwatta,matale,Matale,ukuwela,Ukuwela,elkaduwa_watta,Elkaduwa Watta,7.431713,80.69768,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 ML087,ML087_Dankanda.csv,Dankanda,matale,Matale,rattota,Rattota,polwattakanda,Polwattakanda,7.535083,80.699111,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 ML088,ML088_Hulangamuwa.csv,Hulangamuwa,matale,Matale,matale,Matale,hulangamuwa_north,Hulangamuwa North,7.463938,80.617473,2026-11-27T01:48:16Z,2026-11-28 07:45:00
-ML089,ML089_Dombawela.csv,Dombawela,matale,Matale,matale,Matale,parana_dombawela,Parana Dombawela,7.549472,80.616399,2026-11-27T01:48:16Z,2026-11-28 07:30:00
+ML089,ML089_Dombawela.csv,Dombawela,matale,Matale,matale,Matale,parana_dombawela,Parana Dombawela,7.549472,80.616399,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 ML090,ML090_Hapugaspitiya.csv,Hapugaspitiya,matale,Matale,ambanganga_korale,Ambanganga Korale,aluthwela,Aluthwela,7.549363,80.65447,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 ML091,ML091_Madaweragama.csv,Madaweragama,matale,Matale,rattota,Rattota,meda_weragama,Meda Weragama,7.48479,80.652381,2026-11-27T01:48:16Z,2026-11-28 07:45:00
 ML092,ML092_Nikal_Oya.csv,Nikal Oya,matale,Matale,rattota,Rattota,bodhikotuwa,Bodhikotuwa,7.507722,80.695194,2026-11-27T01:48:16Z,2026-11-28 07:45:00
