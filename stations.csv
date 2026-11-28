@@ -44,7 +44,7 @@ KG072,KG072_Hathgampala.csv,Hathgampala,kegalle,Kegalle,aranayaka,Aranayaka,hath
 KG073,KG073_Hiriwadunna.csv,Hiriwadunna,kegalle,Kegalle,rambukkana,Rambukkana,yodagama,Yodagama,7.291026,80.386344,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 KG074,KG074_Kinivita.csv,Kinivita,kegalle,Kegalle,warakapola,Warakapola,kivuldeniya,Kivuldeniya,7.161222,80.253389,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 KG075,KG075_Poddenikanda.csv,Poddenikanda,kegalle,Kegalle,deraniyagala,Deraniyagala,poddenikanda,Poddenikanda,6.891156,80.407621,2026-11-27T01:48:16Z,2026-11-28 15:15:00
-KG076,KG076_Poonahela.csv,Poonahela,kegalle,Kegalle,bulathkohupitiya,Bulathkohupitiya,wegalla,Wegalla,7.089026,80.311145,2026-11-27T01:48:16Z,2026-11-28 15:00:00
+KG076,KG076_Poonahela.csv,Poonahela,kegalle,Kegalle,bulathkohupitiya,Bulathkohupitiya,wegalla,Wegalla,7.089026,80.311145,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 KG077,KG077_Waharaka.csv,Waharaka,kegalle,Kegalle,ruwanwella,Ruwanwella,daluwalana,Daluwalana,7.07473,80.19962,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 KN035,KN035_Akuruna.csv,Akuruna,kandy,Kandy,akurana,Akurana,bulugohothanna,Bulugohothanna,7.3715,80.6094,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 KN048,KN048_Gurulupotha.csv,Gurulupotha,kandy,Kandy,minipe,Minipe,gurulupotha,Gurulupotha,7.348,80.924611,2026-11-27T01:48:16Z,
@@ -325,7 +325,7 @@ R50,R50_Neluwa.csv,Neluwa,galle,Galle,neluwa,Neluwa,neluwa,Neluwa,6.3791,80.3599
 R51,R51_Kalubowitiyana.csv,Kalubowitiyana,matara,Matara,pitabeddara,Pitabeddara,ambewela,Ambewela,6.3115,80.3941,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 R52,R52_Morawaka.csv,Morawaka,matara,Matara,pitabeddara,Pitabeddara,weliwa,Weliwa,6.2564,80.4935,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 R53,R53_Pallegama.csv,Pallegama,matara,Matara,kotapola,Kotapola,pallegama_north,Pallegama North,6.3282,80.5214,2026-11-27T01:48:16Z,2026-11-28 15:15:00
-R54,R54_Bengamuwa.csv,Bengamuwa,matara,Matara,pasgoda,Pasgoda,bengamuwa_west,Bengamuwa West,6.2607,80.5971,2026-11-27T01:48:16Z,2026-11-28 14:45:00
+R54,R54_Bengamuwa.csv,Bengamuwa,matara,Matara,pasgoda,Pasgoda,bengamuwa_west,Bengamuwa West,6.2607,80.5971,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 R55,R55_Urubokka.csv,Urubokka,matara,Matara,pasgoda,Pasgoda,urubokka,Urubokka,6.2939,80.6312,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 R56,R56_Madakanda.csv,Madakanda,hambantota,Hambantota,katuwana,Katuwana,medakanda,Medakanda,6.2949,80.6729,2026-11-27T01:48:16Z,2026-11-28 15:15:00
 R57,R57_Walasmulla.csv,Walasmulla,hambantota,Hambantota,okewela,Okewela,udadeniya,Udadeniya,6.1517,80.6729,2026-11-27T01:48:16Z,2026-11-28 12:00:00
