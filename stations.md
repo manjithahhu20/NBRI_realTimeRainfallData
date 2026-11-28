@@ -1,13 +1,13 @@
 # Rainfall gauge directory
 
-482 gauges. Static details only; live readings are in the per-gauge files under `data/`.
+481 gauges. Static details only; live readings are in the per-gauge files under `data/`.
 
 ## Gauges by district
 
 | District | Gauges |
 |---|---:|
 | Badulla | 72 |
-| Colombo | 9 |
+| Colombo | 8 |
 | Galle | 18 |
 | Gampaha | 4 |
 | Hambantota | 6 |
@@ -97,7 +97,6 @@
 | T45 | Welimada | Badulla | Welimada | Welimada Town | 6.9077 | 80.9181 | [T45_Welimada.csv](data/T45_Welimada.csv) |
 | BD009 | Wewathanna | Badulla | Bandarawela | Wewathenna | 6.845472 | 80.979778 | [BD009_Wewathanna.csv](data/BD009_Wewathanna.csv) |
 | R08 | Wewegama | Badulla | Uva-Paranagama | Dimbulana | 7.0094 | 80.9536 | [R08_Wewegama.csv](data/R08_Wewegama.csv) |
-| KT302 | Kesbewa | Colombo | Kesbewa | Kesbewa North | 6.795973 | 79.933811 | [KT302_Kesbewa.csv](data/KT302_Kesbewa.csv) |
 | KT301 | Kesbewa-Test | Colombo | Kesbewa | Kesbewa North | 6.795635 | 79.933728 | [KT301_Kesbewa-Test.csv](data/KT301_Kesbewa-Test.csv) |
 | CL025 | Kosgama | Colombo | Seethawaka | Ihala Kosgama North | 6.95009 | 80.14104 | [CL025_Kosgama.csv](data/CL025_Kosgama.csv) |
 | L02 | Kotahera | Colombo | Seethawaka | Aradhana Kanda | 6.9426 | 80.22 | [L02_Kotahera.csv](data/L02_Kotahera.csv) |
