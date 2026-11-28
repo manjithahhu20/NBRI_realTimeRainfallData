@@ -23,7 +23,7 @@ BD022,BD022_Thaldena.csv,Thaldena,badulla,Badulla,meegahakivula,Meegahakivula,hu
 BD023,BD023_Udukumbalwela.csv,Udukumbalwela,badulla,Badulla,ella,Ella,dowa,Dowa,6.85525,81.0199444,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 BD024,BD024_Walgolla.csv,Walgolla,badulla,Badulla,passara,Passara,welgolla,Welgolla,6.980139,81.145083,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 BD078,BD078_Lucky_Land.csv,Lucky Land,badulla,Badulla,uva-paranagama,Uva-Paranagama,alagolla,Alagolla,6.988805,80.923306,2026-11-27T01:48:16Z,2026-11-28 10:45:00
-CL025,CL025_Kosgama.csv,Kosgama,colombo,Colombo,seethawaka,Seethawaka,ihala_kosgama_north,Ihala Kosgama North,6.95009,80.14104,2026-11-27T01:48:16Z,2026-11-28 14:30:00
+CL025,CL025_Kosgama.csv,Kosgama,colombo,Colombo,seethawaka,Seethawaka,ihala_kosgama_north,Ihala Kosgama North,6.95009,80.14104,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 CL104,CL104_Waga-Halpe_Estate.csv,Waga-Halpe Estate,colombo,Colombo,padukka,Padukka,waga_east,Waga East,6.853771,80.143151,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 GL026,GL026_Akmeemana.csv,Akmeemana,galle,Galle,yakkalamulla,Yakkalamulla,udubattawa_west,Udubattawa West,6.086628,80.293526,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 GL027,GL027_Manampita.csv,Manampita,galle,Galle,niyagama,Niyagama,maraggoda,Maraggoda,6.263133,80.263913,2026-11-27T01:48:16Z,2026-11-28 14:45:00
@@ -52,7 +52,7 @@ KN049,KN049_Aladeniya.csv,Aladeniya,kandy,Kandy,harispattuwa,Harispattuwa,viguhu
 KN050,KN050_Udagama.csv,Udagama,kandy,Kandy,udapalatha,Udapalatha,udagama,Udagama,7.141528,80.622917,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KN051,KN051_Belwood.csv,Belwood,kandy,Kandy,delthota,Delthota,perawatta_west,Perawatta West,7.2185,80.666917,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KN052,KN052_Deegala.csv,Deegala,kandy,Kandy,akurana,Akurana,deegala,Deegala,7.382579,80.636441,2026-11-27T01:48:16Z,2026-11-28 14:45:00
-KN053,KN053_Degaldoruwa.csv,Degaldoruwa,kandy,Kandy,kundasale,Kundasale,sirimalwatte_pallegama,Sirimalwatte Pallegama,7.304611,80.664333,2026-11-27T01:48:16Z,2026-11-28 14:30:00
+KN053,KN053_Degaldoruwa.csv,Degaldoruwa,kandy,Kandy,kundasale,Kundasale,sirimalwatte_pallegama,Sirimalwatte Pallegama,7.304611,80.664333,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KN054,KN054_Pattiyagama.csv,Pattiyagama,kandy,Kandy,delthota,Delthota,pattiyagama_udagama,Pattiyagama Udagama,7.155472,80.719111,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KN055,KN055_Bambarabedda.csv,Bambarabedda,kandy,Kandy,udadumbara,Udadumbara,bamgarabedda_east,Bamgarabedda East,7.252556,80.848722,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KN056,KN056_Giddawa.csv,Giddawa,kandy,Kandy,kundasale,Kundasale,wepathana,Wepathana,7.322889,80.728806,2026-11-27T01:48:16Z,2026-11-28 14:45:00
@@ -76,7 +76,7 @@ KT043,KT043_Millewa.csv,Millewa,kalutara,Kalutara,horana,Horana,pahala_millewa_s
 KT044,KT044_Molkawa.csv,Molkawa,kalutara,Kalutara,bulathsinhala,Bulathsinhala,molkawa,Molkawa,6.61049,80.233252,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KT045,KT045_Pethigamuwa.csv,Pethigamuwa,kalutara,Kalutara,millaniya,Millaniya,weniwelpitiya,Weniwelpitiya,6.666637,80.043904,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KT046,KT046_Warakagoda.csv,Warakagoda,kalutara,Kalutara,madurawala,Madurawala,warakagoda_north,Warakagoda North,6.625576,80.107611,2026-11-27T01:48:16Z,2026-11-28 14:45:00
-KT047,KT047_Yattapatha.csv,Yattapatha,kalutara,Kalutara,walallavita,Walallavita,yattapatha,Yattapatha,6.397079,80.295235,2026-11-27T01:48:16Z,2026-11-28 14:30:00
+KT047,KT047_Yattapatha.csv,Yattapatha,kalutara,Kalutara,walallavita,Walallavita,yattapatha,Yattapatha,6.397079,80.295235,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KT095,KT095_Udawela.csv,Udawela,kalutara,Kalutara,agalawatta,Agalawatta,udawela,Udawela,6.551118,80.141843,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KT301,KT301_Kesbewa-Test.csv,Kesbewa-Test,colombo,Colombo,kesbewa,Kesbewa,kesbewa_north,Kesbewa North,6.795635,79.933728,2026-11-27T01:48:16Z,2026-11-28 14:45:00
 KU042,KU042_Patragala.csv,Patragala,kurunegala,Kurunegala,kurunegala,Kurunegala,kudumbuwa,Kudumbuwa,7.387976,80.362039,2026-11-27T01:48:16Z,2026-11-28 14:45:00
