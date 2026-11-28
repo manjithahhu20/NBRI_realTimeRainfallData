@@ -43,7 +43,7 @@ KG071,KG071_Dewalegama.csv,Dewalegama,kegalle,Kegalle,galigamuwa,Galigamuwa,wala
 KG072,KG072_Hathgampala.csv,Hathgampala,kegalle,Kegalle,aranayaka,Aranayaka,hathgampola,Hathgampola,7.175135,80.432909,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KG073,KG073_Hiriwadunna.csv,Hiriwadunna,kegalle,Kegalle,rambukkana,Rambukkana,yodagama,Yodagama,7.291026,80.386344,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KG074,KG074_Kinivita.csv,Kinivita,kegalle,Kegalle,warakapola,Warakapola,kivuldeniya,Kivuldeniya,7.161222,80.253389,2026-11-27T01:48:16Z,2026-11-28 16:45:00
-KG075,KG075_Poddenikanda.csv,Poddenikanda,kegalle,Kegalle,deraniyagala,Deraniyagala,poddenikanda,Poddenikanda,6.891156,80.407621,2026-11-27T01:48:16Z,2026-11-28 16:30:00
+KG075,KG075_Poddenikanda.csv,Poddenikanda,kegalle,Kegalle,deraniyagala,Deraniyagala,poddenikanda,Poddenikanda,6.891156,80.407621,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KG076,KG076_Poonahela.csv,Poonahela,kegalle,Kegalle,bulathkohupitiya,Bulathkohupitiya,wegalla,Wegalla,7.089026,80.311145,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KG077,KG077_Waharaka.csv,Waharaka,kegalle,Kegalle,ruwanwella,Ruwanwella,daluwalana,Daluwalana,7.07473,80.19962,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KN035,KN035_Akuruna.csv,Akuruna,kandy,Kandy,akurana,Akurana,bulugohothanna,Bulugohothanna,7.3715,80.6094,2026-11-27T01:48:16Z,2026-11-28 16:45:00
@@ -70,7 +70,7 @@ KT036,KT036_Akarawila.csv,Akarawila,kalutara,Kalutara,ingiriya,Ingiriya,arakavil
 KT037,KT037_Bandaragama.csv,Bandaragama,kalutara,Kalutara,bandaragama,Bandaragama,bandaragama,Bandaragama,6.710768,79.988702,2026-11-27T01:48:16Z,2026-10-21 11:00:00
 KT038,KT038_Dharga_Town.csv,Dharga Town,kalutara,Kalutara,beruwala,Beruwala,nakandalagoda,Nakandalagoda,6.441016,80.021166,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KT039,KT039_Galpatha.csv,Galpatha,kalutara,Kalutara,millaniya,Millaniya,galpatha_east,Galpatha East,6.635495,80.033058,2026-11-27T01:48:16Z,2026-10-04 10:15:00
-KT040,KT040_Govinna.csv,Govinna,kalutara,Kalutara,bulathsinhala,Bulathsinhala,govinna_north,Govinna North,6.670619,80.12134,2026-11-27T01:48:16Z,2026-11-28 16:30:00
+KT040,KT040_Govinna.csv,Govinna,kalutara,Kalutara,bulathsinhala,Bulathsinhala,govinna_north,Govinna North,6.670619,80.12134,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KT041,KT041_Ilukpotha.csv,Ilukpotha,kalutara,Kalutara,palindanuwara,Palindanuwara,ilukpatha,Ilukpatha,6.574081,80.217966,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KT043,KT043_Millewa.csv,Millewa,kalutara,Kalutara,horana,Horana,pahala_millewa_south,Pahala Millewa South,6.792611,80.084638,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 KT044,KT044_Molkawa.csv,Molkawa,kalutara,Kalutara,bulathsinhala,Bulathsinhala,molkawa,Molkawa,6.61049,80.233252,2026-11-27T01:48:16Z,2026-11-28 16:45:00
@@ -239,7 +239,7 @@ MG112,MG112_Pitakumbura.csv,Pitakumbura,moneragala,Moneragala,bibile,Bibile,pita
 MG113,MG113_Maragalakanda.csv,Maragalakanda,moneragala,Moneragala,moneragala,Moneragala,aliyawatta,Aliyawatta,6.858306,81.35925,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 ML079,ML079_Sembuwatta.csv,Sembuwatta,matale,Matale,ukuwela,Ukuwela,elkaduwa_watta,Elkaduwa Watta,7.431713,80.69768,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 ML087,ML087_Dankanda.csv,Dankanda,matale,Matale,rattota,Rattota,polwattakanda,Polwattakanda,7.535083,80.699111,2026-11-27T01:48:16Z,2026-11-28 16:45:00
-ML088,ML088_Hulangamuwa.csv,Hulangamuwa,matale,Matale,matale,Matale,hulangamuwa_north,Hulangamuwa North,7.463938,80.617473,2026-11-27T01:48:16Z,2026-11-28 16:30:00
+ML088,ML088_Hulangamuwa.csv,Hulangamuwa,matale,Matale,matale,Matale,hulangamuwa_north,Hulangamuwa North,7.463938,80.617473,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 ML089,ML089_Dombawela.csv,Dombawela,matale,Matale,matale,Matale,parana_dombawela,Parana Dombawela,7.549472,80.616399,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 ML090,ML090_Hapugaspitiya.csv,Hapugaspitiya,matale,Matale,ambanganga_korale,Ambanganga Korale,aluthwela,Aluthwela,7.549363,80.65447,2026-11-27T01:48:16Z,2026-11-28 16:45:00
 ML091,ML091_Madaweragama.csv,Madaweragama,matale,Matale,rattota,Rattota,meda_weragama,Meda Weragama,7.48479,80.652381,2026-11-27T01:48:16Z,2026-11-28 16:45:00
