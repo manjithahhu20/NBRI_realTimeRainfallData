@@ -36,10 +36,10 @@ GM033,GM033_Pasyala.csv,Pasyala,gampaha,Gampaha,mirigama,Mirigama,pasyala_east,P
 HT034,HT034_Mulgirigala.csv,Mulgirigala,hambantota,Hambantota,weeraketiya,Weeraketiya,mulgirigala_east,Mulgirigala East,6.1298,80.7491,2026-11-27T01:48:16Z,2026-10-04 10:15:00
 HT106,HT106_Katuwana.csv,Katuwana,hambantota,Hambantota,katuwana,Katuwana,wathukanda,Wathukanda,6.256833,80.665,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KEG/BUK/1024556,KEG_BUK_1024556_Algama.csv,Algama,kegalle,Kegalle,warakapola,Warakapola,algama,Algama,7.155194,80.164222,2026-11-27T01:48:16Z,2026-11-28 06:15:00
-KG068,KG068_Anhettigama.csv,Anhettigama,kegalle,Kegalle,deraniyagala,Deraniyagala,anhettigama,Anhettigama,6.924695,80.377176,2026-11-27T01:48:16Z,2026-11-28 06:00:00
+KG068,KG068_Anhettigama.csv,Anhettigama,kegalle,Kegalle,deraniyagala,Deraniyagala,anhettigama,Anhettigama,6.924695,80.377176,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KG069,KG069_Dedugala.csv,Dedugala,kegalle,Kegalle,bulathkohupitiya,Bulathkohupitiya,dedugala,Dedugala,7.099308,80.399473,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KG070,KG070_Deraniyagala.csv,Deraniyagala,kegalle,Kegalle,deraniyagala,Deraniyagala,deraniyagala,Deraniyagala,6.932005,80.337253,2026-11-27T01:48:16Z,2026-11-28 06:15:00
-KG071,KG071_Dewalegama.csv,Dewalegama,kegalle,Kegalle,galigamuwa,Galigamuwa,walagama,Walagama,7.295152,80.319695,2026-11-27T01:48:16Z,2026-11-28 06:00:00
+KG071,KG071_Dewalegama.csv,Dewalegama,kegalle,Kegalle,galigamuwa,Galigamuwa,walagama,Walagama,7.295152,80.319695,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KG072,KG072_Hathgampala.csv,Hathgampala,kegalle,Kegalle,aranayaka,Aranayaka,hathgampola,Hathgampola,7.175135,80.432909,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KG073,KG073_Hiriwadunna.csv,Hiriwadunna,kegalle,Kegalle,rambukkana,Rambukkana,yodagama,Yodagama,7.291026,80.386344,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KG074,KG074_Kinivita.csv,Kinivita,kegalle,Kegalle,warakapola,Warakapola,kivuldeniya,Kivuldeniya,7.161222,80.253389,2026-11-27T01:48:16Z,2026-11-28 06:15:00
@@ -60,7 +60,7 @@ KN057,KN057_Gomare.csv,Gomare,kandy,Kandy,panvila,Panvila,thawalanthenna,Thawala
 KN058,KN058_Udathalavinna.csv,Udathalavinna,kandy,Kandy,pathadumbara,Pathadumbara,udathalavinna,Udathalavinna,7.338899,80.646663,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KN059,KN059_Kahawatta_Hospital.csv,Kahawatta Hospital,kandy,Kandy,doluwa,Doluwa,kahawatta,Kahawatta,7.161472,80.604611,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KN060,KN060_Kalunthenna.csv,Kalunthenna,kandy,Kandy,udadumbara,Udadumbara,udapitawala,Udapitawala,7.306139,80.903389,2026-11-27T01:48:16Z,2026-11-28 06:15:00
-KN061,KN061_Dunuwila.csv,Dunuwila,kandy,Kandy,medadumbara,Medadumbara,sandasiri_dunuvila,Sandasiri Dunuvila,7.246306,80.822389,2026-11-27T01:48:16Z,2026-11-28 06:00:00
+KN061,KN061_Dunuwila.csv,Dunuwila,kandy,Kandy,medadumbara,Medadumbara,sandasiri_dunuvila,Sandasiri Dunuvila,7.246306,80.822389,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KN062,KN062_Beddegama.csv,Beddegama,kandy,Kandy,panvila,Panvila,beddegama,Beddegama,7.381333,80.752667,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KN063,KN063_Puwakgahadiwela.csv,Puwakgahadiwela,kandy,Kandy,medadumbara,Medadumbara,puwakgahadiwela,Puwakgahadiwela,7.264972,80.815583,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KN064,KN064_Hasalaka.csv,Hasalaka,kandy,Kandy,minipe,Minipe,hasalaka,Hasalaka,7.358278,80.949611,2026-11-27T01:48:16Z,2026-11-28 06:15:00
@@ -81,7 +81,7 @@ KT095,KT095_Udawela.csv,Udawela,kalutara,Kalutara,agalawatta,Agalawatta,udawela,
 KT301,KT301_Kesbewa-Test.csv,Kesbewa-Test,colombo,Colombo,kesbewa,Kesbewa,kesbewa_north,Kesbewa North,6.795635,79.933728,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KT302,KT302_Kesbewa.csv,Kesbewa,colombo,Colombo,kesbewa,Kesbewa,kesbewa_north,Kesbewa North,6.795973,79.933811,2026-11-27T01:48:16Z,2026-11-26 22:00:00
 KU042,KU042_Patragala.csv,Patragala,kurunegala,Kurunegala,kurunegala,Kurunegala,kudumbuwa,Kudumbuwa,7.387976,80.362039,2026-11-27T01:48:16Z,2026-11-28 06:15:00
-KU080,KU080_Ikiriwatta.csv,Ikiriwatta,kurunegala,Kurunegala,rideegama,Rideegama,ikiriwatta,Ikiriwatta,7.428375,80.529146,2026-11-27T01:48:16Z,2026-11-28 06:00:00
+KU080,KU080_Ikiriwatta.csv,Ikiriwatta,kurunegala,Kurunegala,rideegama,Rideegama,ikiriwatta,Ikiriwatta,7.428375,80.529146,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KU081,KU081_Kumbukgete.csv,Kumbukgete,kurunegala,Kurunegala,ganewatta,Ganewatta,santhanagama,Santhanagama,7.672961,80.418984,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KU082,KU082_Mallawapitiya.csv,Mallawapitiya,kurunegala,Kurunegala,mallawapitiya,Mallawapitiya,millawa,Millawa,7.4725,80.3916,2026-11-27T01:48:16Z,2026-11-28 06:15:00
 KU083,KU083_Meethanwala.csv,Meethanwala,kurunegala,Kurunegala,mawathagama,Mawathagama,mee/udagama,Mee/Udagama,7.409033,80.430038,2026-11-27T01:48:16Z,2026-11-28 06:15:00
