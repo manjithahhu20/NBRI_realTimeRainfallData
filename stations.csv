@@ -205,7 +205,7 @@ M18,M18_Wanduramba.csv,Wanduramba,galle,Galle,waduramba,Waduramba,wanduramba_sou
 M19,M19_Madugalla.csv,Madugalla,kandy,Kandy,udadumbara,Udadumbara,madugalla_north,Madugalla North,7.2639,80.8858,2026-11-27T01:48:16Z,2026-11-28 14:30:00
 M20,M20_Nillambe.csv,Nillambe,kandy,Kandy,doluwa,Doluwa,nillamba,Nillamba,7.1913,80.6361,2026-11-27T01:48:16Z,2026-11-28 14:30:00
 M21,M21_Ulapane.csv,Ulapane,kandy,Kandy,ganga_ihala_korale,Ganga Ihala Korale,ulapane_north,Ulapane North,7.1102,80.5651,2026-11-27T01:48:16Z,2026-11-28 14:30:00
-M22,M22_Boyagama.csv,Boyagama,kegalle,Kegalle,galigamuwa,Galigamuwa,asideniya,Asideniya,7.2266,80.3054,2026-11-27T01:48:16Z,2026-11-28 14:15:00
+M22,M22_Boyagama.csv,Boyagama,kegalle,Kegalle,galigamuwa,Galigamuwa,asideniya,Asideniya,7.2266,80.3054,2026-11-27T01:48:16Z,2026-11-28 14:30:00
 M23,M23_Deewela.csv,Deewela,kegalle,Kegalle,kegalle,Kegalle,deewela_pallegama,Deewela Pallegama,7.2206,80.3895,2026-11-27T01:48:16Z,2026-11-28 14:30:00
 M24,M24_Dotheloya_Estate.csv,Dotheloya Estate,kegalle,Kegalle,aranayaka,Aranayaka,ganthne_medagama,Ganthne Medagama,7.1166,80.4238,2026-11-27T01:48:16Z,2026-11-28 14:30:00
 M25,M25_Galapitamada.csv,Galapitamada,kegalle,Kegalle,ruwanwella,Ruwanwella,galapitamada,Galapitamada,7.1412,80.2345,2026-11-27T01:48:16Z,2026-11-28 14:30:00
@@ -347,7 +347,7 @@ R72,R72_Ulinduwawa.csv,Ulinduwawa,ratnapura,Ratnapura,kolonna,Kolonna,boraluwage
 R73,R73_Waleboda.csv,Waleboda,ratnapura,Ratnapura,imbulpe,Imbulpe,kattadikanda,Kattadikanda,6.7288,80.6383,2026-11-27T01:48:16Z,2026-11-28 11:45:00
 R74,R74_Kongasthenna.csv,Kongasthenna,ratnapura,Ratnapura,weligepola,Weligepola,kongastenna,Kongastenna,6.595,80.7183,2026-11-27T01:48:16Z,2026-10-04 14:15:00
 R75,R75_Wewelwaththa.csv,Wewelwaththa,ratnapura,Ratnapura,ratnapura,Ratnapura,bambarabotuwa,Bambarabotuwa,6.7045,80.5555,2026-11-27T01:48:16Z,2026-11-28 14:30:00
-RT127,RT127_Delwala.csv,Delwala,ratnapura,Ratnapura,nivithigala,Nivithigala,doloswalakanda,Doloswalakanda,6.54124,80.483865,2026-11-27T01:48:16Z,2026-11-28 14:15:00
+RT127,RT127_Delwala.csv,Delwala,ratnapura,Ratnapura,nivithigala,Nivithigala,doloswalakanda,Doloswalakanda,6.54124,80.483865,2026-11-27T01:48:16Z,2026-11-28 14:30:00
 RT128,RT128_Egoda_waleboda.csv,Egoda waleboda,ratnapura,Ratnapura,balangoda,Balangoda,egoda_waleboda,Egoda Waleboda,6.721414,80.610459,2026-11-27T01:48:16Z,2026-11-28 14:15:00
 RT129,RT129_Gileemale.csv,Gileemale,ratnapura,Ratnapura,ratnapura,Ratnapura,gileemale_south,Gileemale South,6.742078,80.447523,2026-11-27T01:48:16Z,2026-11-28 14:30:00
 RT130,RT130_Halpe.csv,Halpe,ratnapura,Ratnapura,imbulpe,Imbulpe,halpe,Halpe,6.730893,80.825408,2026-11-27T01:48:16Z,2026-11-28 14:30:00
