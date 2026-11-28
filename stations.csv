@@ -62,7 +62,7 @@ KN059,KN059_Kahawatta_Hospital.csv,Kahawatta Hospital,kandy,Kandy,doluwa,Doluwa,
 KN060,KN060_Kalunthenna.csv,Kalunthenna,kandy,Kandy,udadumbara,Udadumbara,udapitawala,Udapitawala,7.306139,80.903389,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 KN061,KN061_Dunuwila.csv,Dunuwila,kandy,Kandy,medadumbara,Medadumbara,sandasiri_dunuvila,Sandasiri Dunuvila,7.246306,80.822389,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 KN062,KN062_Beddegama.csv,Beddegama,kandy,Kandy,panvila,Panvila,beddegama,Beddegama,7.381333,80.752667,2026-11-27T01:48:16Z,2026-11-28 22:45:00
-KN063,KN063_Puwakgahadiwela.csv,Puwakgahadiwela,kandy,Kandy,medadumbara,Medadumbara,puwakgahadiwela,Puwakgahadiwela,7.264972,80.815583,2026-11-27T01:48:16Z,2026-11-28 22:30:00
+KN063,KN063_Puwakgahadiwela.csv,Puwakgahadiwela,kandy,Kandy,medadumbara,Medadumbara,puwakgahadiwela,Puwakgahadiwela,7.264972,80.815583,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 KN064,KN064_Hasalaka.csv,Hasalaka,kandy,Kandy,minipe,Minipe,hasalaka,Hasalaka,7.358278,80.949611,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 KN065,KN065_Udapalatha-Pallegama.csv,Udapalatha-Pallegama,kandy,Kandy,udapalatha,Udapalatha,doragala,Doragala,7.103222,80.607472,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 KN066,KN066_Unuwinna.csv,Unuwinna,kandy,Kandy,pathahewaheta,Pathahewaheta,unuvinna_west,Unuvinna West,7.19725,80.760361,2026-11-27T01:48:16Z,2026-11-28 22:45:00
@@ -240,7 +240,7 @@ MG113,MG113_Maragalakanda.csv,Maragalakanda,moneragala,Moneragala,moneragala,Mon
 ML079,ML079_Sembuwatta.csv,Sembuwatta,matale,Matale,ukuwela,Ukuwela,elkaduwa_watta,Elkaduwa Watta,7.431713,80.69768,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 ML087,ML087_Dankanda.csv,Dankanda,matale,Matale,rattota,Rattota,polwattakanda,Polwattakanda,7.535083,80.699111,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 ML088,ML088_Hulangamuwa.csv,Hulangamuwa,matale,Matale,matale,Matale,hulangamuwa_north,Hulangamuwa North,7.463938,80.617473,2026-11-27T01:48:16Z,2026-11-28 22:45:00
-ML089,ML089_Dombawela.csv,Dombawela,matale,Matale,matale,Matale,parana_dombawela,Parana Dombawela,7.549472,80.616399,2026-11-27T01:48:16Z,2026-11-28 22:30:00
+ML089,ML089_Dombawela.csv,Dombawela,matale,Matale,matale,Matale,parana_dombawela,Parana Dombawela,7.549472,80.616399,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 ML090,ML090_Hapugaspitiya.csv,Hapugaspitiya,matale,Matale,ambanganga_korale,Ambanganga Korale,aluthwela,Aluthwela,7.549363,80.65447,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 ML091,ML091_Madaweragama.csv,Madaweragama,matale,Matale,rattota,Rattota,meda_weragama,Meda Weragama,7.48479,80.652381,2026-11-27T01:48:16Z,2026-11-28 22:45:00
 ML092,ML092_Nikal_Oya.csv,Nikal Oya,matale,Matale,rattota,Rattota,bodhikotuwa,Bodhikotuwa,7.507722,80.695194,2026-11-27T01:48:16Z,2026-11-28 22:45:00
